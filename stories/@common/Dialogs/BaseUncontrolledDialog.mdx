@@ -1,0 +1,75 @@
+import { Meta, Title, Subtitle, Story } from "@storybook/blocks";
+import * as Stories from "./BaseUncontrolledDialog.stories.tsx";
+
+<Meta of={Stories} />
+
+<Title>\<BaseUncontrolledDialog></Title>
+
+<Subtitle>Dialog 对话框 ( 非控组件形式 )</Subtitle>
+
+```tsx
+import {
+  BaseUncontrolledDialog
+  type BaseUncontrolledDialogProps,
+  type BaseUncontrolledDialogRef
+} from "blaxberry-app-ui-react";
+```
+
+`props`属性可参照`BaseControlledDialogProps`
+
+## 基本使用
+
+<Story of={Stories.ExampleBase} />
+
+```tsx
+import * as React from "react";
+import {
+  BaseUncontrolledDialog,
+  type BaseUncontrolledDialogRef,
+} from "blaxberry-app-ui-react";
+
+function Component() {
+  const ref = React.useRef<BaseUncontrolledDialogRef>(null);
+  const handleOpen = React.useCallback(() => ref.current?.handleOpen(), []);
+
+  return (
+    <>
+      <button onClick={handleOpen}>Open</button>
+
+      <BaseUncontrolledDialog
+        ref={ref}
+        dialog={{
+          fullScreen: false,
+        }}
+        dialogTitle={{
+          children: "标题",
+        }}
+        dialogContent={{
+          children: "内容",
+        }}
+        dialogActions={{
+          cancel: {
+            text: "取消",
+            callback: (close) => {
+              close();
+            },
+            props: {
+              size: "small",
+              color: "error",
+            },
+          },
+          ok: {
+            text: "确认",
+            callback: (close) => {
+              close();
+            },
+            props: {
+              size: "small",
+            },
+          },
+        }}
+      />
+    </>
+  );
+}
+```

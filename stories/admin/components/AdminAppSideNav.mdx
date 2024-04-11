@@ -1,0 +1,72 @@
+import { Meta, Title, Subtitle, Controls, Story } from "@storybook/blocks";
+import * as Stories from "./AdminAppSideNav.stories.tsx";
+
+<Meta of={Stories} />
+
+<Title>\<AdminAppSideNav></Title>
+
+```tsx
+import { AdminAppSideNav } from "blaxberry-app-ui-react";
+```
+
+```tsx
+import * as React from "react";
+import { AdminAppSideNav } from "blaxberry-app-ui-react";
+
+function Component() {
+  const [isExpanded, setIsExpanded] = React.useState<boolean>(false);
+  const toggleExpand = React.useCallback(() => {
+    setIsExpanded((s) => !s);
+  }, []);
+
+  return (
+    <>
+      <button onClick={toggleExpand}>Toggle</button>
+
+      <AdminAppSideNav
+        isExpanded={isExpanded}
+        isExpanded={isExpanded}
+        logo={{
+          url: "https://myapp-admin.vercel.app/favicon.svg",
+          text: "My Admin",
+          onClick: () => {
+            console.log("logo");
+          },
+        }}
+        navigation={{
+          list: [
+            {
+              id: "1",
+              text: "11",
+              icon: <GridViewOutlinedIcon />,
+              isActive: false,
+              onClick: () => {},
+            },
+            {
+              id: "2",
+              text: "22",
+              icon: <FormatListBulletedRoundedIcon />,
+              isActive: false,
+              onClick: () => {},
+            },
+            {
+              id: "3",
+              text: "33",
+              icon: <AccountTreeOutlinedIcon />,
+              isActive: true,
+              onClick: () => {},
+            },
+            {
+              id: "4",
+              text: "44",
+              icon: <SettingsOutlinedIcon />,
+              isActive: false,
+              onClick: () => {},
+            },
+          ],
+        }}
+      />
+    </>
+  );
+}
+```

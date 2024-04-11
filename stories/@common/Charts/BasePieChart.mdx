@@ -1,0 +1,58 @@
+import { Meta, Title, Subtitle, Controls, Story } from "@storybook/blocks";
+import * as Stories from "./BasePieChart.stories.tsx";
+
+<Meta of={Stories} />
+
+<Title>\<BasePieChart></Title>
+
+<Subtitle>基础饼状图</Subtitle>
+
+```tsx
+import {
+  BasePieChart,
+  type BasePieChartProps,
+  type BasePieChartDataItem,
+} from "blaxberry-app-ui-react";
+```
+
+### 基本使用
+
+<Story of={Stories.ExampleBase} />
+
+```tsx
+import * as React from "react";
+import {
+  BasePieChart,
+  type BasePieChartDataItem,
+} from "blaxberry-app-ui-react";
+
+function Component() {
+  return (
+    <BasePieChart
+      dataSource={dataSource}
+      chartProps={{ width: 400, height: 200 }}
+      // centerLabel={""}
+      // isHalfPieChart={false}
+      // useHighlight={false}
+      // hiddenSideLabel={false}
+      // seriesProps={{
+      //   paddingAngle: 0,
+      //   innerRadius: 0,
+      //   cornerRadius: 0,
+      //   arcLabel: (item): string => {
+      //     // const total = data.map((item) => item.value).reduce((a, b) => a + b, 0)
+      //     // const percent = `${((item.value / total) * 100).toFixed(0)}%`;
+      //     return item.id === "2" ? `${item.label}-${item.value}` : "";
+      //   },
+      // }}
+    />
+  );
+}
+
+const dataSource: Array<BasePieChartDataItem> = [
+  { id: 0, value: 10, label: "series A" },
+  { id: 1, value: 15, label: "series B" },
+  { id: 2, value: 20, label: "series C" },
+  { id: 3, value: 10, label: "series D", color: "pink" },
+];
+```

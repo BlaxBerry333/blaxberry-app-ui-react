@@ -1,0 +1,146 @@
+import { Meta, Title, Subtitle, Controls, Story } from "@storybook/blocks";
+import * as Stories from "./AdminAppLayout.stories.tsx";
+
+<Meta of={Stories} />
+
+<Title>\<AdminAppLayout></Title>
+
+```tsx
+import { AdminAppLayout } from "blaxberry-app-ui-react";
+```
+
+```tsx
+import * as React from "react";
+import { AdminLayout } from "blaxberry-app-ui-react";
+
+function Component() {
+  return (
+    <AdminLayout
+      appSideNavProps={appSideNavProps}
+      appHeaderProps={appHeaderProps}
+      appFooterProps={appFooterProps}
+      customThemeOptions={{ customThemeMode: "dark" }}
+    >
+      {[...new Array(20)].map((_, i) => (
+        <p key={i}>xxx</p>
+      ))}
+    </AdminLayout>
+  );
+}
+
+const appSideNavProps = {
+  isExpanded: true,
+  logo: {
+    url: "https://myapp-admin.vercel.app/favicon.svg",
+    text: "My Admin",
+  },
+  navigation: {
+    list: [
+      {
+        id: "1",
+        text: "11",
+        icon: <GridViewOutlinedIcon />,
+        isActive: false,
+        onClick: () => {},
+      },
+      {
+        id: "2",
+        text: "22",
+        icon: <FormatListBulletedRoundedIcon />,
+        isActive: false,
+        onClick: () => {},
+      },
+      {
+        id: "3",
+        text: "33",
+        icon: <AccountTreeOutlinedIcon />,
+        isActive: true,
+        onClick: () => {},
+      },
+      {
+        id: "4",
+        text: "44",
+        icon: <SettingsOutlinedIcon />,
+        isActive: false,
+        onClick: () => {},
+      },
+    ],
+  },
+};
+
+const appHeaderProps = {
+  headerBreadcrumbs: {
+    list: [
+      { id: "home", text: "首页", icon: <HomeOutlinedIcon /> },
+      { id: "home", text: "流程图", icon: <AccountTreeOutlinedIcon /> },
+      { id: "home", text: "列表" },
+    ],
+  },
+  headerActions: {
+    toggleTranslation: {
+      show: true,
+      defaultValue: "en",
+      onClick: (language) => {
+        console.log("clicked ", language);
+      },
+      languagesList: [
+        {
+          id: "en",
+          text: "English",
+          avatarSrc:
+            "https://as2.ftcdn.net/v2/jpg/00/61/47/33/1000_F_61473310_GwaVCFCKeQdeRj05P88xlnO3dF5HiJRp.jpg",
+        },
+        {
+          id: "ja",
+          text: "Japanese",
+          avatarSrc:
+            "https://p1.hiclipart.com/preview/341/890/500/worldcup-flag-balls-32-icons-round-japan-flag.jpg",
+        },
+        {
+          id: "zh",
+          text: "Chinese",
+          avatarSrc: "https://ks-global.jp/img/cn.png",
+        },
+      ],
+    },
+  },
+  headAccount: {
+    avatarProps: {
+      alt: "Account",
+      src: "https://avatars.githubusercontent.com/u/73395592?v=4",
+    },
+    listProps: {
+      listSubheader: {
+        children: "blaxberry123@comxxxxxx",
+      },
+      data: [
+        {
+          id: "edit-account",
+          text: "编辑资料",
+          icon: <EditNoteRoundedIcon />,
+          onClick: () => {},
+        },
+      ],
+      extraData: [
+        {
+          id: "exit-account",
+          text: "退出登陆",
+          icon: <ExitToAppRoundedIcon />,
+          onClick: () => {},
+        },
+      ],
+    },
+  },
+};
+
+const appFooterProps = {
+  copyright: "©2024 BlaxBerry All Rights Reserved",
+  socialLinks: [
+    {
+      type: "github",
+      link: "https://github.com/BlaxBerry333/blaxberry-app-ui-react",
+    },
+    { type: "x", link: "https://twitter.com/home" },
+  ],
+};
+```

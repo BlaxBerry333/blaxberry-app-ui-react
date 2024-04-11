@@ -1,0 +1,20 @@
+import * as React from "react";
+import { type ListProps } from "@mui/material/List";
+import { type ListItemProps } from "@mui/material/ListItem";
+import { type ListItemButtonProps } from "@mui/material/ListItemButton";
+import { type ListItemIconProps } from "@mui/material/ListItemIcon";
+import { type ListItemTextProps } from "@mui/material/ListItemText";
+import { type ListSubheaderProps } from "@mui/material/ListSubheader";
+import { type HeaderAccountListItemData } from "./HeaderAccountListItem";
+export type HeaderAccountListProps = {
+    data?: Array<HeaderAccountListItemData>;
+    extraData?: Array<HeaderAccountListItemData>;
+    listProps?: ListProps;
+    listSubheader?: ListSubheaderProps;
+    listItemProps?: ListItemProps;
+    listItemButtonProps?: ListItemButtonProps;
+    listItemIconProps?: ListItemIconProps;
+    listItemTextProps?: ListItemTextProps;
+};
+declare const HeaderAccountListMemo: React.NamedExoticComponent<HeaderAccountListProps>;
+export default HeaderAccountListMemo;

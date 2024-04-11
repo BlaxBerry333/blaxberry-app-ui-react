@@ -1,0 +1,32 @@
+import { Meta, Title, Subtitle, Controls, Story } from "@storybook/blocks";
+import * as Stories from "./AdminAppFooter.stories.tsx";
+
+<Meta of={Stories} />
+
+<Title>\<AdminAppFooter></Title>
+
+```tsx
+import { AdminAppFooter } from "blaxberry-app-ui-react";
+```
+
+```tsx
+import * as React from "react";
+import { AdminAppSideNav } from "blaxberry-app-ui-react";
+
+function Component() {
+  return (
+    <AdminAppFooter
+      copyright="©2024 BlaxBerry All Rights Reserved"
+      showTopDivider={true}
+      socialLinks={[
+        {
+          type: "github",
+          link: "https://github.com/BlaxBerry333/blaxberry-app-ui-react",
+        },
+        { type: "x", link: "https://twitter.com/home" },
+        { type: "facebook", link: "https://www.facebook.com/" },
+      ]}
+    />
+  );
+}
+```

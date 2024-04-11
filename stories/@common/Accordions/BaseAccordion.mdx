@@ -1,0 +1,56 @@
+import { Meta, Title, Subtitle, Controls, Story } from "@storybook/blocks";
+import * as Stories from "./BaseAccordion.stories";
+
+<Meta of={Stories} />
+
+<Title>\<BaseAccordion></Title>
+
+<Subtitle>Accordion 手风琴</Subtitle>
+
+```tsx
+import { BaseAccordion, type BaseAccordionProps } from "blaxberry-app-ui-react";
+```
+
+<Controls />
+
+## 基本使用
+
+<Story of={Stories.ExampleBase} />
+
+```tsx
+import React from "react";
+import { BaseAccordion, type BaseAccordionProps } from "blaxberry-app-ui-react";
+
+function App() {
+  return <BaseAccordion title="Title">xxx</BaseAccordion>;
+}
+```
+
+## 更多例子
+
+```tsx
+// 禁止展开
+<BaseAccordion title="Title" disabled>xxx</BaseAccordion>
+
+// 默认展开
+<BaseAccordion title="Title" defaultExpanded>xxx</BaseAccordion>
+
+// 反转展开图标的位置
+<BaseAccordion title="Title" reverseExpandIcon>xxx</BaseAccordion>
+
+// 自定义展开图标
+<BaseAccordion title="Title" expandIcon={"A"}>xxx</BaseAccordion>
+
+// 自定义展开内容右下角的扩展内容
+<BaseAccordion
+    title="Title"
+    actions={
+        <>
+            <button>AA<button>
+            <button>BB<button>
+        </>
+    }
+>
+    xxx
+</BaseAccordion>
+```

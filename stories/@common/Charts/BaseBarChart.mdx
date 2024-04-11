@@ -1,0 +1,57 @@
+import { Meta, Title, Subtitle, Controls, Story } from "@storybook/blocks";
+import * as Stories from "./BaseBarChart.stories.tsx";
+
+<Meta of={Stories} />
+
+<Title>\<BaseBarChart></Title>
+
+<Subtitle>基础柱状图</Subtitle>
+
+```tsx
+import {
+  BaseBarChart,
+  type BaseBarChartProps,
+  type BaseBarChartDataItem,
+} from "blaxberry-app-ui-react";
+```
+
+### 基本使用
+
+<Story of={Stories.ExampleBase} />
+
+```tsx
+import * as React from "react";
+import {
+  BaseBarChart,
+  type BaseBarChartDataItem,
+} from "blaxberry-app-ui-react";
+
+function Component() {
+  return (
+    <BaseBarChart
+      xLabels={xLabels}
+      dataSource={dataSource}
+      chartProps={{ width: 500, height: 300 }}
+      // isStacking={false}
+      // isColumChart={false}
+      // showHelperLines={true}
+    />
+  );
+}
+
+const xLabels: Array<string> = ["AA", "BB", "CC", "DD", "EE", "FF", "GG"];
+
+const dataSource: Array<BaseBarChartDataItem> = [
+  {
+    id: "NO.1",
+    label: "NO.1",
+    data: [4000, 3000, 2000, -2780, -1890, 2390, 3490],
+    color: "crimson",
+  },
+  {
+    id: "NO.2",
+    label: "NO.2",
+    data: [2400, 1398, 9800, 3908, -4800, -3800, 4300],
+  },
+];
+```

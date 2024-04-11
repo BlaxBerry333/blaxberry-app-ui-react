@@ -1,0 +1,116 @@
+import { Meta, Title, Subtitle, Controls, Story } from "@storybook/blocks";
+import * as Stories from "./BaseControlledDialog.stories.tsx";
+
+<Meta of={Stories} />
+
+<Title>\<BaseControlledDailog></Title>
+
+<Subtitle>Dialog 对话框 ( 受控组件形式 )</Subtitle>
+
+```tsx
+import {
+  BaseControlledDailog,
+  type BaseControlledDailogProps,
+} from "blaxberry-app-ui-react";
+```
+
+<Controls />
+
+## 内置对话框内容
+
+<Story of={Stories.ExampleBuiltinContent} />
+
+```tsx
+import * as React from "react";
+import { BaseControlledDailog } from "blaxberry-app-ui-react";
+
+function Component() {
+  const [isOpen, setIsOpen] = React.useState<boolean>(false);
+
+  const handleClose = React.useCallback(() => setIsOpen(false), []);
+  const handleOpen = React.useCallback(() => setIsOpen(true), []);
+
+  return (
+    <>
+      <button onClick={handleOpen}>Open</button>
+
+      <BaseControlledDialog
+        isOpen={isOpen}
+        handleClose={handleClose}
+        dialog={{
+          fullScreen: false,
+        }}
+        dialogTitle={{
+          children: "标题",
+        }}
+        dialogContent={{
+          children: "内容",
+        }}
+        dialogActions={{
+          cancel: {
+            text: "取消",
+            callback: (close) => {
+              close();
+            },
+            props: {
+              size: "small",
+              color: "error",
+            },
+          },
+          ok: {
+            text: "确认",
+            callback: (close) => {
+              close();
+            },
+            props: {
+              size: "small",
+            },
+          },
+        }}
+      />
+    </>
+  );
+}
+```
+
+<div style={{background:"pink",padding:"1rem"}}>
+注意点：
+
+`dialogTitle.children`属性值建议为文本，样式建议通过`dialogTitle.style`、`dialogTitle.sx`属性修改。若属性值使用 h1~h6 元素则会报错`"cannot appear as a child of <h2>."`
+
+</div>
+
+## 自定义对话框内容
+
+通过`children`覆盖并渲染自定义对话框内容
+
+<Story of={Stories.ExampleCustomContent} />
+
+```tsx
+import * as React from "react";
+import { BaseControlledDailog } from "blaxberry-app-ui-react";
+
+function Component() {
+  const [isOpen, setIsOpen] = React.useState<boolean>(false);
+
+  const handleClose = React.useCallback(() => setIsOpen(false), []);
+  const handleOpen = React.useCallback(() => setIsOpen(true), []);
+
+  return (
+    <>
+      <button onClick={handleOpen}>Open</button>
+
+      <BaseControlledDialog
+        isOpen={isOpen}
+        handleClose={handleClose}
+        dialog={{
+          fullScreen: false,
+        }}
+      >
+        Custom Content
+        <button onClick={handleClose}>Close</button>
+      </BaseControlledDialog>
+    </>
+  );
+}
+```

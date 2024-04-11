@@ -1,0 +1,41 @@
+import { Meta, Title, Subtitle, Controls, Story } from "@storybook/blocks";
+import * as Stories from "./BaseButton.stories.tsx";
+
+<Meta of={Stories} />
+
+<Title>\<BaseButton></Title>
+
+<Subtitle>基础按钮</Subtitle>
+
+```tsx
+import { BaseButton, type BaseButtonProps } from "blaxberry-app-ui-react";
+```
+
+## 基本使用
+
+建议仅使用文本作为按钮内容
+
+<Story of={Stories.ExampleBase} />
+
+```tsx
+import * as React from "react";
+import { BaseButton } from "blaxberry-app-ui-react";
+
+function Component() {
+  return (
+    <>
+      <div>
+        <BaseButton>ABCDEFG</BaseButton>
+        <BaseButton variant="text">xxx</BaseButton>
+        <BaseButton variant="contained">xxx</BaseButton>
+      </div>
+
+      <div>
+        <BaseButton color="error">ABCDEFG</BaseButton>
+        <BaseButton>?</BaseButton>
+        <BaseButton disabled>?</BaseButton>
+      </div>
+    </>
+  );
+}
+```

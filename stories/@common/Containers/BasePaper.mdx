@@ -1,0 +1,25 @@
+import { Meta, Title, Subtitle, Controls, Story } from "@storybook/blocks";
+import * as Stories from "./BasePaper.stories.tsx";
+
+<Meta of={Stories} />
+
+<Title>\<BasePaper></Title>
+
+<Subtitle>基础纸张容器</Subtitle>
+
+```tsx
+import { BasePaper, type BasePaperProps } from "blaxberry-app-ui-react";
+```
+
+### 基本使用
+
+<Story of={Stories.ExampleBase} />
+
+```tsx
+import * as React from "react";
+import { BasePaper } from "blaxberry-app-ui-react";
+
+function Component() {
+  return <BasePaper>xxx</BasePaper>;
+}
+```

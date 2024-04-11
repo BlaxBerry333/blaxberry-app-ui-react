@@ -1,0 +1,57 @@
+import { Meta, Title, Subtitle, Controls, Story } from "@storybook/blocks";
+import * as Stories from "./BaseLineChart.stories.tsx";
+
+<Meta of={Stories} />
+
+<Title>\<BaseLineChart></Title>
+
+<Subtitle>基础折线图</Subtitle>
+
+```tsx
+import {
+  BaseLineChart,
+  type BaseLineChartProps,
+  type BaseLineChartDataItem,
+} from "blaxberry-app-ui-react";
+```
+
+### 基本使用
+
+<Story of={Stories.ExampleBase} />
+
+```tsx
+import * as React from "react";
+import {
+  BaseLineChart,
+  type BaseLineChartDataItem,
+} from "blaxberry-app-ui-react";
+
+function Component() {
+  return (
+    <BaseLineChart
+      xLabels={xLabels}
+      dataSource={dataSource}
+      chartProps={{ width: 500, height: 300 }}
+      // isAreaChart={false}
+      // couldConnectNulls={true}
+      // showHelperLines={true}
+    />
+  );
+}
+
+const xLabels: Array<string> = ["AA", "BB", "CC", "DD", "EE", "FF", "GG"];
+
+const dataSource: Array<BaseLineChartDataItem> = [
+  {
+    id: "NO.1",
+    label: "NO.1",
+    data: [4000, 3000, 200, 2780, null, 2390, 3490],
+    color: "crimson",
+  },
+  {
+    id: "No.2",
+    label: "No.2",
+    data: [2400, 1398, 9800, 3908, 4800, 3800, 4300],
+  },
+];
+```

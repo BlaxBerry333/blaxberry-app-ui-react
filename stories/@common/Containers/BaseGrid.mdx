@@ -1,0 +1,51 @@
+import { Meta, Title, Subtitle, Controls, Story } from "@storybook/blocks";
+import * as Stories from "./BaseGrid.stories.tsx";
+
+<Meta of={Stories} />
+
+<Title>\<BaseGrid></Title>
+
+<Subtitle>基础栅格容器</Subtitle>
+
+```tsx
+import { BaseGrid, type BaseGridProps } from "blaxberry-app-ui-react";
+```
+
+### 基本使用
+
+<Story of={Stories.ExampleBase} />
+
+```tsx
+import * as React from "react";
+import { BaseGrid, type BaseGridItem } from "blaxberry-app-ui-react";
+
+function Component() {
+  return (
+    <BaseGrid
+      data={data}
+      gridContainerProps={{
+        style: { padding: 8, backgroundColor: "skyblue" },
+      }}
+      commonGridItemProps={{
+        style: { padding: 8, backgroundColor: "pink" },
+      }}
+    />
+  );
+}
+
+const data: Array<BaseGridItem> = [
+  { gridItemProps: { xs: 4 }, id: "AAA", children: "AAA" },
+  { gridItemProps: { xs: 4 }, id: "BBB", children: "BBB" },
+  { gridItemProps: { xs: 4 }, id: "CCC", children: "CCC" },
+  { gridItemProps: { xs: 8 }, id: "DDD", children: "DDD" },
+  { gridItemProps: { xs: 4 }, id: "EEE", children: "EEE" },
+  {
+    gridItemProps: {
+      xs: 12,
+      style: { backgroundColor: "grey", fontWeight: 600, color: "white" },
+    },
+    id: "FFF",
+    children: "FFF",
+  },
+];
+```

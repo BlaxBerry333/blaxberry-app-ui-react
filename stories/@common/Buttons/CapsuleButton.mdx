@@ -1,0 +1,63 @@
+import { Meta, Title, Subtitle, Controls, Story } from "@storybook/blocks";
+import * as Stories from "./CapsuleButton.stories.tsx";
+
+<Meta of={Stories} />
+
+<Title>\<CapsuleButton></Title>
+
+<Subtitle>胶囊组合按钮</Subtitle>
+
+```tsx
+import {
+  CapsuleButton,
+  SelectedCapsuleButton,
+  type CapsuleButtonProps,
+} from "blaxberry-app-ui-react";
+```
+
+### 基本使用
+
+默认选中左侧按钮，可通过`props.defaultSelected`属性修改默认选中的按钮
+
+可通过`props.leftButtonProps`、`props.rightButtonProps`、`props.wrapperProps`熟悉对样式继续额外自定
+
+<Story of={Stories.ExampleBase} />
+
+```tsx
+import * as React from "react";
+import {
+  CapsuleButton,
+  SelectedCapsuleButton,
+  type CapsuleButtonProps,
+} from "blaxberry-app-ui-react";
+
+function Component() {
+  const handleClick: CapsuleButtonProps["onClick"] = React.useCallback(
+    (button) => console.log(button),
+    [],
+  );
+  return (
+    <>
+      <CapsuleButton
+        onClick={handleClick}
+        leftButtonProps={{ children: "左" }}
+        rightButtonProps={{ children: "右" }}
+      />
+      <br />
+      <CapsuleButton
+        defaultSelected={SelectedCapsuleButton.Right}
+        onClick={handleClick}
+        leftButtonProps={{ children: "左" }}
+        rightButtonProps={{ children: "右" }}
+      />
+      <br />
+      <CapsuleButton
+        onClick={handleClick}
+        leftButtonProps={{ children: "OK", color: "success" }}
+        rightButtonProps={{ children: "NO", color: "error" }}
+        wrapperProps={{ sx: { my: 2 } }}
+      />
+    </>
+  );
+}
+```

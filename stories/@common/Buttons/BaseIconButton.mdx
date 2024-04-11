@@ -1,0 +1,67 @@
+import { Meta, Title, Subtitle, Controls, Story } from "@storybook/blocks";
+import * as Stories from "./BaseIconButton.stories.tsx";
+
+<Meta of={Stories} />
+
+<Title>\<BaseIconButton></Title>
+
+<Subtitle>基础图标按钮</Subtitle>
+
+```tsx
+import {
+  BaseIconButton,
+  type BaseIconButtonProps,
+} from "blaxberry-app-ui-react";
+import HomeIcon from "@mui/icons-material/HomeOutlined";
+```
+
+## 基本使用
+
+建议仅使用 Icon 图标组件作为按钮内容
+
+否则过多的文本内容会被遮盖
+
+<Story of={Stories.ExampleBase} />
+
+```tsx
+import * as React from "react";
+import { BaseIconButton } from "blaxberry-app-ui-react";
+
+function Component() {
+  return (
+    <>
+      <div>
+        <BaseIconButton>
+          <HomeIcon />
+        </BaseIconButton>
+        <BaseIconButton variant="text">
+          <HomeIcon />
+        </BaseIconButton>
+        <BaseIconButton variant="contained">
+          <HomeIcon />
+        </BaseIconButton>
+      </div>
+
+      <div>
+        <BaseIconButton>ABCDEFG</BaseIconButton>
+        <BaseIconButton>?</BaseIconButton>
+        <BaseIconButton disabled>
+          <HomeIcon />
+        </BaseIconButton>
+      </div>
+
+      <div>
+        <BaseIconButton color="error">
+          <HomeIcon />
+        </BaseIconButton>
+        <BaseIconButton color="success">
+          <HomeIcon />
+        </BaseIconButton>
+        <BaseIconButton color="secondary">
+          <HomeIcon />
+        </BaseIconButton>
+      </div>
+    </>
+  );
+}
+```
