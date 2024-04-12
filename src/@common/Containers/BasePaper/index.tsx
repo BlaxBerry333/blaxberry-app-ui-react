@@ -18,6 +18,12 @@ const BasePaper: React.FC<BasePaperProps> = ({
         sx={(theme) => ({
           borderRadius: theme.shape.borderRadius,
           p: 2,
+          backgroundColor: "background.paper",
+          color: "text.secondary",
+          transition: theme.transitions.create("all", {
+            easing: theme.transitions.easing.sharp,
+            duration: theme.transitions.duration.leavingScreen,
+          }),
         })}
         {...contentProps}
       >

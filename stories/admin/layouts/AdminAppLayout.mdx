@@ -19,7 +19,23 @@ function Component() {
       appSideNavProps={appSideNavProps}
       appHeaderProps={appHeaderProps}
       appFooterProps={appFooterProps}
-      customThemeOptions={{ customThemeMode: "dark" }}
+      customThemeOptions={{
+        customThemeMode: "dark",
+        customThemePaletteOptions: {
+          primary: {
+            contrastText: "",
+            dark: "#3949ab",
+            light: "#5c6bc0",
+            main: "#3f51b5",
+          },
+          secondary: {
+            contrastText: "",
+            dark: "#1e88e5",
+            light: "#42a5f5",
+            main: "#2196f3",
+          },
+        },
+      }}
     >
       {[...new Array(20)].map((_, i) => (
         <p key={i}>xxx</p>

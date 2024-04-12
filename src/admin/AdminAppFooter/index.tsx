@@ -44,6 +44,12 @@ const AdminAppFooter: React.FC<AdminAppFooterProps> = ({
           px: 2,
           pb: 2,
           mt: showTopDivider ? 0 : 2,
+          backgroundColor: "background.paper",
+          color: "text.secondary",
+          transition: theme.transitions.create("all", {
+            easing: theme.transitions.easing.sharp,
+            duration: theme.transitions.duration.leavingScreen,
+          }),
         })}
         {...footerProps}
       >

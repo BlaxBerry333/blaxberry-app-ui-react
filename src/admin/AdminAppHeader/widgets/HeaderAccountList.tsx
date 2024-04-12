@@ -53,7 +53,7 @@ const HeaderAccountList: React.FC<HeaderAccountListProps> = ({
             sx={(theme) => ({
               lineHeight: 1,
               textAlign: "center",
-              borderRadius: theme.shape.borderRadius,
+              borderRadius: theme.shadows[2],
               py: 0.25,
               px: 0.95,
               mb: 0.5,

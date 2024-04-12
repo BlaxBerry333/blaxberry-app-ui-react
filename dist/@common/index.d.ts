@@ -4,4 +4,5 @@ export * from "./Charts";
 export * from "./Containers";
 export * from "./Dialogs";
 export * from "./Lists";
+export * from "./Messages";
 export * from "./Paragraphs";

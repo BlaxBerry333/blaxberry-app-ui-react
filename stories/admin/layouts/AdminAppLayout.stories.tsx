@@ -6,7 +6,7 @@ import AdminAppFooterStoryMeta from "../components/AdminAppFooter.stories";
 import AdminAppHeaderStoryMeta from "../components/AdminAppHeader.stories";
 import AdminAppSideNavStoryMeta from "../components/AdminAppSideNav.stories";
 
-import { BasePaper } from "../../../src/@common";
+import { BaseButton, BasePaper } from "../../../src/@common";
 import "./AdminAppLayout.stories.css";
 
 const meta = {
@@ -31,6 +31,20 @@ export const ExampleBase: Stroy = {
         appFooterProps={AdminAppFooterStoryMeta.args}
         customThemeOptions={{
           customThemeMode: "dark",
+          customThemePaletteOptions: {
+            primary: {
+              contrastText: "#fff",
+              dark: "#3949ab",
+              light: "#5c6bc0",
+              main: "#3f51b5",
+            },
+            secondary: {
+              contrastText: "",
+              dark: "#1e88e5",
+              light: "#42a5f5",
+              main: "#2196f3",
+            },
+          },
         }}
       >
         {[...new Array(20)].map((_, i) => (
@@ -40,6 +54,15 @@ export const ExampleBase: Stroy = {
         <BasePaper>111</BasePaper>
         <BasePaper contentProps={{ style: { width: 100 } }}>222</BasePaper>
         <BasePaper wrapperProps={{ sx: { p: 0 } }}>333</BasePaper>
+
+        <div>
+          <BaseButton>ABCDEFG</BaseButton>
+          <BaseButton variant="text">xxx</BaseButton>
+          <BaseButton variant="contained">xxx</BaseButton>
+          <BaseButton color="error">ABCDEFG</BaseButton>
+          <BaseButton>?</BaseButton>
+          <BaseButton disabled>?</BaseButton>
+        </div>
       </AdminLayout>
     );
   },

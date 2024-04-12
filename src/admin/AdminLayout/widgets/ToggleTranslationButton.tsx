@@ -1,10 +1,11 @@
 import GTranslateRoundedIcon from "@mui/icons-material/GTranslateRounded";
-import { Popover } from "@mui/material";
+import useTheme from "@mui/material/styles/useTheme";
 import * as React from "react";
 
 import { BaseIconButton } from "@/@common";
 import HeaderAccountList from "@/admin/AdminAppHeader/widgets/HeaderAccountList";
 import type { HeaderAccountListItemData } from "@/admin/AdminAppHeader/widgets/HeaderAccountListItem";
+import Popover from "@mui/material/Popover";
 
 export type ToggleTranslationButtonProps = {
   show?: boolean;
@@ -34,6 +35,9 @@ const ToggleTranslationButton = ({
     setAnchorEl(null);
   }, []);
 
+  const theme = useTheme();
+  const isDarkMode = theme.palette.mode === "dark";
+
   return (
     <>
       <BaseIconButton
@@ -41,6 +45,7 @@ const ToggleTranslationButton = ({
         sx={{
           display: show ? "flex" : "none",
           mx: 0.5,
+          color: isDarkMode || open ? "#fff" : "default",
         }}
         onClick={handleOpen}
       >

@@ -23,6 +23,10 @@
 | ------------- | :-: |
 | BaseParagraph | ✅  |
 
+| Message   |     |
+| --------- | :-: |
+| BaseAlert | ✅  |
+
 | Containers |     |
 | ---------- | :-: |
 | BasePaper  | ✅  |

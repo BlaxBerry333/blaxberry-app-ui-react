@@ -56,7 +56,12 @@ const HeaderAccountListItem: React.FC<HeaderAccountListItemProps> = ({
           <Avatar
             alt={item.id}
             src={item.avatarSrc}
-            sx={{ width: 24, height: 24, mr: 1 }}
+            sx={(theme) => ({
+              width: 24,
+              height: 24,
+              mr: 1,
+              boxShadow: theme.shadows,
+            })}
           />
         )}
 

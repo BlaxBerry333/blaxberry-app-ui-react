@@ -1,5 +1,6 @@
 import FullscreenExitRoundedIcon from "@mui/icons-material/FullscreenExitRounded";
 import FullscreenRoundedIcon from "@mui/icons-material/FullscreenRounded";
+import useTheme from "@mui/material/styles/useTheme";
 import * as React from "react";
 
 import { BaseIconButton } from "@/@common";
@@ -27,11 +28,15 @@ const ToggleFullScreenButton = ({
     };
   }, []);
 
+  const theme = useTheme();
+  const isDarkMode = theme.palette.mode === "dark";
+
   return (
     <BaseIconButton
       sx={{
         display: show ? "flex" : "none",
         mx: 0.5,
+        color: isDarkMode ? "#fff" : "default",
       }}
       onClick={() => {
         toggleFullScreen();

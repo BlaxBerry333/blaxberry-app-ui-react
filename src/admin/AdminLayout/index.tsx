@@ -2,6 +2,7 @@ import Box from "@mui/material/Box";
 import {
   ThemeProvider as MuiThemeProvider,
   createTheme,
+  type PaletteOptions,
 } from "@mui/material/styles";
 import * as React from "react";
 
@@ -26,6 +27,7 @@ export type AdminLayoutProps = React.PropsWithChildren<{
   appFooterProps: AdminAppFooterProps;
   customThemeOptions: {
     customThemeMode: ThemeMode;
+    customThemePaletteOptions?: PaletteOptions;
   };
 }>;
 
@@ -34,7 +36,7 @@ const AdminLayout: React.FC<AdminLayoutProps> = ({
   appHeaderProps,
   appFooterProps,
   children,
-  customThemeOptions: { customThemeMode = "light" },
+  customThemeOptions: { customThemeMode = "light", customThemePaletteOptions },
 }) => {
   const [isExpanded, setIsExpanded] = React.useState<boolean>(false);
   const toggleExpand = React.useCallback(() => {
@@ -47,8 +49,11 @@ const AdminLayout: React.FC<AdminLayoutProps> = ({
   }, []);
 
   const theme = React.useMemo(
-    () => createTheme({ palette: { mode: themeMode } }),
-    [themeMode],
+    () =>
+      createTheme({
+        palette: { mode: themeMode, ...customThemePaletteOptions },
+      }),
+    [themeMode, customThemePaletteOptions],
   );
 
   // React.useEffect(() => {

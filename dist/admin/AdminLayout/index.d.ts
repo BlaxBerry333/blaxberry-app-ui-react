@@ -1,3 +1,4 @@
+import { type PaletteOptions } from "@mui/material/styles";
 import * as React from "react";
 import { type AdminAppFooterProps } from "../AdminAppFooter";
 import { type AdminAppHeaderProps } from "../AdminAppHeader";
@@ -9,6 +10,7 @@ export type AdminLayoutProps = React.PropsWithChildren<{
     appFooterProps: AdminAppFooterProps;
     customThemeOptions: {
         customThemeMode: ThemeMode;
+        customThemePaletteOptions?: PaletteOptions;
     };
 }>;
 declare const AdminLayoutMemo: React.NamedExoticComponent<AdminLayoutProps>;

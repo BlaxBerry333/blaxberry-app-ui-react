@@ -50,6 +50,7 @@ const AdminAppSideNav: React.FC<AdminAppSideNavProps> = ({
         width: navWidth,
         minWidth: navWidth,
         backgroundColor: "background.paper",
+        color: "text.secondary",
         transition: theme.transitions.create("all", {
           easing: theme.transitions.easing.sharp,
           duration: theme.transitions.duration.leavingScreen,
