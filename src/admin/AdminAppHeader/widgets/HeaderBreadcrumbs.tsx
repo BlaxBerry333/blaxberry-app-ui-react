@@ -24,27 +24,26 @@ const HeaderBreadcrumbs: React.FC<HeaderBreadcrumbsProps> = ({
           xs: "none",
           md: "flex",
         },
+        ml: 2,
         alignItems: "center",
         "& .MuiBreadcrumbs-separator": { mx: 1.5 },
       }}
       {...props}
     >
       {list?.map((item, index) => {
-        const isActive = !item.icon || list.length - 1 === index;
-
+        const isActive = list.length - 1 === index;
         return (
           <Typography
             key={item.id}
             component="div"
             noWrap
-            color={isActive ? "text.primary" : "text.inherit"}
             variant="body2"
-            sx={{
+            sx={(theme) => ({
               display: "flex",
               alignItems: "flex-end",
-              fontWeight: isActive ? 500 : 400,
-              ml: 2,
-            }}
+              fontWeight: isActive ? 600 : 400,
+              color: isActive ? theme.palette.primary.main : "text.inherit",
+            })}
           >
             {/* icon */}
             {item.icon && (

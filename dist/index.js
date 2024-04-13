@@ -17247,7 +17247,7 @@ Check the render method of \`` + n + "`." : "";
         };
       }
     }
-    function fse(n) {
+    function hse(n) {
       return n;
     }
     function pz(n) {
@@ -19734,9 +19734,9 @@ Incoming: %s`, ke, "[" + r.join(", ") + "]", "[" + n.join(", ") + "]");
       }
       return [N, x];
     }
-    function dse(n, r, u) {
+    function mse(n, r, u) {
     }
-    function pse(n, r, u) {
+    function vse(n, r, u) {
     }
     function vC(n, r, u) {
       var p = cn, m = Gs(), x, R = ao();
@@ -27905,7 +27905,7 @@ const wW = $P, OW = ({
       o && /* @__PURE__ */ P.jsx(eW, { children: o })
     ]
   }
-), mse = rS(OW);
+), yse = rS(OW);
 function kW(e) {
   return Wt("MuiButton", e);
 }
@@ -28588,7 +28588,7 @@ const sD = "left", VW = ({
       ]
     }
   );
-}, vse = Bn.memo(VW);
+}, bse = Bn.memo(VW);
 function Ee() {
   return Ee = Object.assign ? Object.assign.bind() : function(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -40895,7 +40895,7 @@ const Nte = XO, Ate = ({
     axisHighlight: d ? { x: "line", y: "line" } : void 0,
     ...o
   }
-), gse = Bn.memo(Ate), Dte = ["classes", "color", "cornerRadius", "dataIndex", "endAngle", "highlightScope", "id", "innerRadius", "isFaded", "isHighlighted", "onClick", "outerRadius", "paddingAngle", "startAngle"];
+), xse = Bn.memo(Ate), Dte = ["classes", "color", "cornerRadius", "dataIndex", "endAngle", "highlightScope", "id", "innerRadius", "isFaded", "isHighlighted", "onClick", "outerRadius", "paddingAngle", "startAngle"];
 function $te(e) {
   return ea("MuiPieArc", e);
 }
@@ -42124,7 +42124,7 @@ const Jte = He("text")(({ theme: e }) => ({
       children: t && /* @__PURE__ */ P.jsx(tne, { children: t })
     }
   );
-}, yse = L.memo(ine), ane = ["id", "dataIndex", "classes", "color", "highlightScope", "slots", "slotProps", "style", "onClick"];
+}, Sse = L.memo(ine), ane = ["id", "dataIndex", "classes", "color", "highlightScope", "slots", "slotProps", "style", "onClick"];
 function sne(e) {
   return ea("MuiBarElement", e);
 }
@@ -42821,7 +42821,7 @@ const pne = XO, hne = ({
     layout: f ? "horizontal" : "vertical",
     ...o
   }
-), bse = Bn.memo(hne), mne = qt("MuiBox", ["root"]), vne = mne, gne = zO(), S3 = a7({
+), Ese = Bn.memo(hne), mne = qt("MuiBox", ["root"]), vne = mne, gne = zO(), S3 = a7({
   themeId: Mh,
   defaultTheme: gne,
   defaultClassName: vne.root,
@@ -42866,7 +42866,7 @@ const Nc = S3, yne = ({
     ...t,
     children: o
   }
-) }), xse = Bn.memo(yne), E3 = /* @__PURE__ */ L.createContext();
+) }), Tse = Bn.memo(yne), E3 = /* @__PURE__ */ L.createContext();
 process.env.NODE_ENV !== "production" && (E3.displayName = "GridContext");
 const K$ = E3;
 function bne(e) {
@@ -43346,7 +43346,7 @@ const X$ = Lg, Ane = ({
     },
     s.id
   );
-}) }), Sse = Bn.memo(Ane);
+}) }), Cse = Bn.memo(Ane);
 function Dne(e) {
   const t = _i(e);
   return t.body === e ? kc(e).innerWidth > t.documentElement.clientWidth : e.scrollHeight > e.clientHeight;
@@ -45061,7 +45061,7 @@ const Nre = $3, Are = ({
       handleClose: f
     }
   );
-}, Ese = L.memo(
+}, Rse = L.memo(
   L.forwardRef($re)
 ), j3 = /* @__PURE__ */ L.createContext({});
 process.env.NODE_ENV !== "production" && (j3.displayName = "ListContext");
@@ -45320,7 +45320,7 @@ const L3 = Kk, Vre = ({
     ) : void 0,
     children: e
   }
-), Tse = L.memo(Vre);
+), wse = L.memo(Vre);
 function I3(e) {
   return Ft;
 }
@@ -46434,7 +46434,7 @@ const H3 = V3, Ooe = ({
       )
     ]
   }
-) }), Cse = L.memo(Ooe);
+) }), Ose = L.memo(Ooe);
 function koe(e) {
   return Wt("MuiAlert", e);
 }
@@ -47668,7 +47668,7 @@ const lie = X3, uie = ({
     ...t,
     children: s
   }
-) }), Rse = rS(uie), cie = (e) => /* @__PURE__ */ P.jsx(Io, { component: "p", ...e }), wse = rS(cie);
+) }), kse = rS(uie), cie = (e) => /* @__PURE__ */ P.jsx(Io, { component: "p", ...e }), _se = rS(cie);
 var t_ = {}, fie = $i;
 Object.defineProperty(t_, "__esModule", {
   value: !0
@@ -47777,9 +47777,18 @@ const Tie = {
   facebook: /* @__PURE__ */ P.jsx(Q3, {})
 };
 function Cie() {
-  const e = document.documentElement;
-  document.fullscreenElement ? document.exitFullscreen && document.exitFullscreen() : e.requestFullscreen().catch(() => {
+  Oie() ? wie() : Rie(document.documentElement);
+}
+function Rie(e) {
+  e.requestFullscreen && e.requestFullscreen().catch(() => {
   });
+}
+function wie() {
+  document.exitFullscreen && document.exitFullscreen().catch(() => {
+  });
+}
+function Oie() {
+  return !!document.fullscreenElement;
 }
 const Ay = {
   AdminAppHeader: {
@@ -47789,7 +47798,7 @@ const Ay = {
     largeWidth: 200,
     smallWidth: 70
   }
-}, Rie = Ay.AdminAppHeader.height, wie = ({
+}, kie = Ay.AdminAppHeader.height, _ie = ({
   contentProps: e,
   headerComponent: t,
   children: o
@@ -47801,18 +47810,18 @@ const Ay = {
       sx: {
         py: 2,
         overflowY: "scroll",
-        height: `calc(100vh - ${Rie}px - 48px)`
-        // 8px * 6
+        height: `calc(100vh - ${kie}px - 16px)`
+        // 8px * 2
       },
       children: o
     }
   )
-] }), Oie = L.memo(wie);
-function kie(e) {
+] }), Mie = L.memo(_ie);
+function Nie(e) {
   return Wt("MuiDivider", e);
 }
 qt("MuiDivider", ["root", "absolute", "fullWidth", "inset", "middle", "flexItem", "light", "vertical", "withChildren", "withChildrenVertical", "textAlignRight", "textAlignLeft", "wrapper", "wrapperVertical"]);
-const _ie = ["absolute", "children", "className", "component", "flexItem", "light", "orientation", "role", "textAlign", "variant"], Mie = (e) => {
+const Aie = ["absolute", "children", "className", "component", "flexItem", "light", "orientation", "role", "textAlign", "variant"], Die = (e) => {
   const {
     absolute: t,
     children: o,
@@ -47826,8 +47835,8 @@ const _ie = ["absolute", "children", "className", "component", "flexItem", "ligh
   return Kt({
     root: ["root", t && "absolute", g, f && "light", d === "vertical" && "vertical", c && "flexItem", o && "withChildren", o && d === "vertical" && "withChildrenVertical", v === "right" && d !== "vertical" && "textAlignRight", v === "left" && d !== "vertical" && "textAlignLeft"],
     wrapper: ["wrapper", d === "vertical" && "wrapperVertical"]
-  }, kie, s);
-}, Nie = He("div", {
+  }, Nie, s);
+}, $ie = He("div", {
   name: "MuiDivider",
   slot: "Root",
   overridesResolver: (e, t) => {
@@ -47913,7 +47922,7 @@ const _ie = ["absolute", "children", "className", "component", "flexItem", "ligh
   "&::after": {
     width: "90%"
   }
-})), Aie = He("span", {
+})), jie = He("span", {
   name: "MuiDivider",
   slot: "Wrapper",
   overridesResolver: (e, t) => {
@@ -47947,7 +47956,7 @@ const _ie = ["absolute", "children", "className", "component", "flexItem", "ligh
     role: E = v !== "hr" ? "separator" : void 0,
     textAlign: T = "center",
     variant: k = "fullWidth"
-  } = s, O = at(s, _ie), M = W({}, s, {
+  } = s, O = at(s, Aie), M = W({}, s, {
     absolute: c,
     component: v,
     flexItem: g,
@@ -47956,15 +47965,15 @@ const _ie = ["absolute", "children", "className", "component", "flexItem", "ligh
     role: E,
     textAlign: T,
     variant: k
-  }), _ = Mie(M);
-  return /* @__PURE__ */ P.jsx(Nie, W({
+  }), _ = Die(M);
+  return /* @__PURE__ */ P.jsx($ie, W({
     as: v,
     className: tt(_.root, d),
     role: E,
     ref: o,
     ownerState: M
   }, O, {
-    children: f ? /* @__PURE__ */ P.jsx(Aie, {
+    children: f ? /* @__PURE__ */ P.jsx(jie, {
       className: _.wrapper,
       ownerState: M,
       children: f
@@ -48090,7 +48099,7 @@ process.env.NODE_ENV !== "production" && (rI.propTypes = {
    */
   useFlexGap: i.bool
 });
-const Die = rI, $ie = ({
+const Pie = rI, Lie = ({
   footerProps: e,
   copyright: t,
   socialLinks: o,
@@ -48137,7 +48146,7 @@ const Die = rI, $ie = ({
             children: t
           }
         ),
-        o && /* @__PURE__ */ P.jsx(Die, { direction: "row", spacing: 1, sx: { pl: 2 }, children: o == null ? void 0 : o.map((c) => /* @__PURE__ */ P.jsx(
+        o && /* @__PURE__ */ P.jsx(Pie, { direction: "row", spacing: 1, sx: { pl: 2 }, children: o == null ? void 0 : o.map((c) => /* @__PURE__ */ P.jsx(
           q3,
           {
             size: "small",
@@ -48151,12 +48160,12 @@ const Die = rI, $ie = ({
       ]
     }
   )
-] }), jie = L.memo($ie);
-function Pie(e) {
+] }), Iie = L.memo(Lie);
+function zie(e) {
   return Wt("MuiPopover", e);
 }
 qt("MuiPopover", ["root", "paper"]);
-const Lie = ["onEntering"], Iie = ["action", "anchorEl", "anchorOrigin", "anchorPosition", "anchorReference", "children", "className", "container", "elevation", "marginThreshold", "open", "PaperProps", "slots", "slotProps", "transformOrigin", "TransitionComponent", "transitionDuration", "TransitionProps", "disableScrollLock"], zie = ["slotProps"];
+const Uie = ["onEntering"], Fie = ["action", "anchorEl", "anchorOrigin", "anchorPosition", "anchorReference", "children", "className", "container", "elevation", "marginThreshold", "open", "PaperProps", "slots", "slotProps", "transformOrigin", "TransitionComponent", "transitionDuration", "TransitionProps", "disableScrollLock"], Bie = ["slotProps"];
 function ij(e, t) {
   let o = 0;
   return typeof t == "number" ? o = t : t === "center" ? o = e.height / 2 : t === "bottom" && (o = e.height), o;
@@ -48171,19 +48180,19 @@ function sj(e) {
 function d1(e) {
   return typeof e == "function" ? e() : e;
 }
-const Uie = (e) => {
+const Vie = (e) => {
   const {
     classes: t
   } = e;
   return Kt({
     root: ["root"],
     paper: ["paper"]
-  }, Pie, t);
-}, Fie = He(Yk, {
+  }, zie, t);
+}, Hie = He(Yk, {
   name: "MuiPopover",
   slot: "Root",
   overridesResolver: (e, t) => t.root
-})({}), Bie = He(gs, {
+})({}), Wie = He(gs, {
   name: "MuiPopover",
   slot: "Paper",
   overridesResolver: (e, t) => t.paper
@@ -48232,7 +48241,7 @@ const Uie = (e) => {
       onEntering: te
     } = {},
     disableScrollLock: ne = !1
-  } = d, J = at(d.TransitionProps, Lie), q = at(d, Iie), oe = (s = I == null ? void 0 : I.paper) != null ? s : U, G = L.useRef(), Q = zo(G, oe.ref), le = W({}, d, {
+  } = d, J = at(d.TransitionProps, Uie), q = at(d, Fie), oe = (s = I == null ? void 0 : I.paper) != null ? s : U, G = L.useRef(), Q = zo(G, oe.ref), le = W({}, d, {
     anchorOrigin: b,
     anchorReference: E,
     elevation: M,
@@ -48242,7 +48251,7 @@ const Uie = (e) => {
     TransitionComponent: B,
     transitionDuration: V,
     TransitionProps: J
-  }), ue = Uie(le), pe = L.useCallback(() => {
+  }), ue = Vie(le), pe = L.useCallback(() => {
     if (E === "anchorPosition")
       return process.env.NODE_ENV !== "production" && (S || console.error('MUI: You need to provide a `anchorPosition` prop when using <Popover anchorReference="anchorPosition" />.')), S;
     const Be = d1(g), Se = Be && Be.nodeType === 1 ? Be : _i(G.current).body, lt = Se.getBoundingClientRect();
@@ -48323,7 +48332,7 @@ const Uie = (e) => {
   }, [g, j, we]);
   let Ae = V;
   V === "auto" && !B.muiSupportAuto && (Ae = void 0);
-  const Te = O || (g ? _i(d1(g)).body : void 0), $e = (c = $ == null ? void 0 : $.root) != null ? c : Fie, Pe = (f = $ == null ? void 0 : $.paper) != null ? f : Bie, ve = Nh({
+  const Te = O || (g ? _i(d1(g)).body : void 0), $e = (c = $ == null ? void 0 : $.root) != null ? c : Hie, Pe = (f = $ == null ? void 0 : $.paper) != null ? f : Wie, ve = Nh({
     elementType: Pe,
     externalSlotProps: W({}, oe, {
       style: ee ? oe.style : W({}, oe.style, {
@@ -48354,7 +48363,7 @@ const Uie = (e) => {
     className: tt(ue.root, k)
   }), {
     slotProps: Ve
-  } = _e, K = at(_e, zie);
+  } = _e, K = at(_e, Bie);
   return /* @__PURE__ */ P.jsx($e, W({}, K, !C1($e) && {
     slotProps: Ve,
     disableScrollLock: ne
@@ -48549,7 +48558,7 @@ process.env.NODE_ENV !== "production" && (oI.propTypes = {
    */
   TransitionProps: i.object
 });
-const iI = oI, Vie = ({
+const iI = oI, qie = ({
   item: e,
   listItemProps: t,
   listItemButtonProps: o,
@@ -48590,7 +48599,7 @@ const iI = oI, Vie = ({
       )
     ]
   }
-) }), lj = L.memo(Vie), Hie = ({
+) }), lj = L.memo(qie), Yie = ({
   data: e,
   extraData: t,
   listProps: o,
@@ -48652,7 +48661,7 @@ const iI = oI, Vie = ({
       ] })
     ]
   }
-), aI = L.memo(Hie), Wie = ({
+), aI = L.memo(Yie), Gie = ({
   avatarProps: e,
   popoverProps: t,
   listProps: o
@@ -48715,9 +48724,9 @@ const iI = oI, Vie = ({
       }
     )
   ] });
-}, qie = L.memo(Wie), Yie = Dc(/* @__PURE__ */ P.jsx("path", {
+}, Kie = L.memo(Gie), Xie = Dc(/* @__PURE__ */ P.jsx("path", {
   d: "M6 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-6 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
-}), "MoreHoriz"), Gie = ["slots", "slotProps"], Kie = He(Xh)(({
+}), "MoreHoriz"), Qie = ["slots", "slotProps"], Zie = He(Xh)(({
   theme: e
 }) => W({
   display: "flex",
@@ -48743,7 +48752,7 @@ const iI = oI, Vie = ({
   } : {
     backgroundColor: Aw(e.palette.grey[600], 0.12)
   })
-})), Xie = He(Yie)({
+})), Jie = He(Xie)({
   width: 24,
   height: 16
 });
@@ -48751,13 +48760,13 @@ function sI(e) {
   const {
     slots: t = {},
     slotProps: o = {}
-  } = e, s = at(e, Gie), c = e;
+  } = e, s = at(e, Qie), c = e;
   return /* @__PURE__ */ P.jsx("li", {
-    children: /* @__PURE__ */ P.jsx(Kie, W({
+    children: /* @__PURE__ */ P.jsx(Zie, W({
       focusRipple: !0
     }, s, {
       ownerState: c,
-      children: /* @__PURE__ */ P.jsx(Xie, W({
+      children: /* @__PURE__ */ P.jsx(Jie, W({
         as: t.CollapsedIcon,
         ownerState: c
       }, o.collapsedIcon))
@@ -48785,10 +48794,10 @@ process.env.NODE_ENV !== "production" && (sI.propTypes = {
    */
   sx: i.object
 });
-function Qie(e) {
+function eae(e) {
   return Wt("MuiBreadcrumbs", e);
 }
-const Zie = qt("MuiBreadcrumbs", ["root", "ol", "li", "separator"]), Jie = Zie, eae = ["children", "className", "component", "slots", "slotProps", "expandText", "itemsAfterCollapse", "itemsBeforeCollapse", "maxItems", "separator"], tae = (e) => {
+const tae = qt("MuiBreadcrumbs", ["root", "ol", "li", "separator"]), nae = tae, rae = ["children", "className", "component", "slots", "slotProps", "expandText", "itemsAfterCollapse", "itemsBeforeCollapse", "maxItems", "separator"], oae = (e) => {
   const {
     classes: t
   } = e;
@@ -48797,14 +48806,14 @@ const Zie = qt("MuiBreadcrumbs", ["root", "ol", "li", "separator"]), Jie = Zie, 
     li: ["li"],
     ol: ["ol"],
     separator: ["separator"]
-  }, Qie, t);
-}, nae = He(Io, {
+  }, eae, t);
+}, iae = He(Io, {
   name: "MuiBreadcrumbs",
   slot: "Root",
   overridesResolver: (e, t) => [{
-    [`& .${Jie.li}`]: t.li
+    [`& .${nae.li}`]: t.li
   }, t.root]
-})({}), rae = He("ol", {
+})({}), aae = He("ol", {
   name: "MuiBreadcrumbs",
   slot: "Ol",
   overridesResolver: (e, t) => t.ol
@@ -48815,7 +48824,7 @@ const Zie = qt("MuiBreadcrumbs", ["root", "ol", "li", "separator"]), Jie = Zie, 
   padding: 0,
   margin: 0,
   listStyle: "none"
-}), oae = He("li", {
+}), sae = He("li", {
   name: "MuiBreadcrumbs",
   slot: "Separator",
   overridesResolver: (e, t) => t.separator
@@ -48825,8 +48834,8 @@ const Zie = qt("MuiBreadcrumbs", ["root", "ol", "li", "separator"]), Jie = Zie, 
   marginLeft: 8,
   marginRight: 8
 });
-function iae(e, t, o, s) {
-  return e.reduce((c, f, d) => (d < e.length - 1 ? c = c.concat(f, /* @__PURE__ */ P.jsx(oae, {
+function lae(e, t, o, s) {
+  return e.reduce((c, f, d) => (d < e.length - 1 ? c = c.concat(f, /* @__PURE__ */ P.jsx(sae, {
     "aria-hidden": !0,
     className: t,
     ownerState: s,
@@ -48848,7 +48857,7 @@ const lI = /* @__PURE__ */ L.forwardRef(function(t, o) {
     itemsBeforeCollapse: E = 1,
     maxItems: T = 8,
     separator: k = "/"
-  } = s, O = at(s, eae), [M, _] = L.useState(!1), j = W({}, s, {
+  } = s, O = at(s, rae), [M, _] = L.useState(!1), j = W({}, s, {
     component: d,
     expanded: M,
     expandText: b,
@@ -48856,7 +48865,7 @@ const lI = /* @__PURE__ */ L.forwardRef(function(t, o) {
     itemsBeforeCollapse: E,
     maxItems: T,
     separator: k
-  }), U = tae(j), $ = Nh({
+  }), U = oae(j), $ = Nh({
     elementType: v.CollapsedIcon,
     externalSlotProps: g.collapsedIcon,
     ownerState: j
@@ -48882,18 +48891,18 @@ const lI = /* @__PURE__ */ L.forwardRef(function(t, o) {
     className: U.li,
     children: V
   }, `child-${te}`));
-  return /* @__PURE__ */ P.jsx(nae, W({
+  return /* @__PURE__ */ P.jsx(iae, W({
     ref: o,
     component: d,
     color: "text.secondary",
     className: tt(U.root, f),
     ownerState: j
   }, O, {
-    children: /* @__PURE__ */ P.jsx(rae, {
+    children: /* @__PURE__ */ P.jsx(aae, {
       className: U.ol,
       ref: I,
       ownerState: j,
-      children: iae(M || T && B.length <= T ? B : A(B), U.separator, k, j)
+      children: lae(M || T && B.length <= T ? B : A(B), U.separator, k, j)
     })
   }));
 });
@@ -48968,36 +48977,36 @@ process.env.NODE_ENV !== "production" && (lI.propTypes = {
    */
   sx: i.oneOfType([i.arrayOf(i.oneOfType([i.func, i.object, i.bool])), i.func, i.object])
 });
-const aae = lI, sae = ({
+const uae = lI, cae = ({
   list: e,
   props: t
 }) => /* @__PURE__ */ P.jsx(
-  aae,
+  uae,
   {
     sx: {
       display: {
         xs: "none",
         md: "flex"
       },
+      ml: 2,
       alignItems: "center",
       "& .MuiBreadcrumbs-separator": { mx: 1.5 }
     },
     ...t,
     children: e == null ? void 0 : e.map((o, s) => {
-      const c = !o.icon || e.length - 1 === s;
+      const c = e.length - 1 === s;
       return /* @__PURE__ */ P.jsxs(
         Io,
         {
           component: "div",
           noWrap: !0,
-          color: c ? "text.primary" : "text.inherit",
           variant: "body2",
-          sx: {
+          sx: (f) => ({
             display: "flex",
             alignItems: "flex-end",
-            fontWeight: c ? 500 : 400,
-            ml: 2
-          },
+            fontWeight: c ? 600 : 400,
+            color: c ? f.palette.primary.main : "text.inherit"
+          }),
           children: [
             o.icon && /* @__PURE__ */ P.jsx(
               Nc,
@@ -49014,24 +49023,24 @@ const aae = lI, sae = ({
       );
     })
   }
-), lae = L.memo(sae);
-var a_ = {}, uae = $i;
+), fae = L.memo(cae);
+var a_ = {}, dae = $i;
 Object.defineProperty(a_, "__esModule", {
   value: !0
 });
-var uI = a_.default = void 0, cae = uae(ja()), fae = P;
-uI = a_.default = (0, cae.default)(/* @__PURE__ */ (0, fae.jsx)("path", {
+var uI = a_.default = void 0, pae = dae(ja()), hae = P;
+uI = a_.default = (0, pae.default)(/* @__PURE__ */ (0, hae.jsx)("path", {
   d: "M11 17h10v-2H11zm-8-5 4 4V8zm0 9h18v-2H3zM3 3v2h18V3zm8 6h10V7H11zm0 4h10v-2H11z"
 }), "FormatIndentDecrease");
-var s_ = {}, dae = $i;
+var s_ = {}, mae = $i;
 Object.defineProperty(s_, "__esModule", {
   value: !0
 });
-var cI = s_.default = void 0, pae = dae(ja()), hae = P;
-cI = s_.default = (0, pae.default)(/* @__PURE__ */ (0, hae.jsx)("path", {
+var cI = s_.default = void 0, vae = mae(ja()), gae = P;
+cI = s_.default = (0, vae.default)(/* @__PURE__ */ (0, gae.jsx)("path", {
   d: "M3 21h18v-2H3zM3 8v8l4-4zm8 9h10v-2H11zM3 3v2h18V3zm8 6h10V7H11zm0 4h10v-2H11z"
 }), "FormatIndentIncrease");
-const uj = { width: 18, height: 18 }, mae = ({
+const uj = { width: 18, height: 18 }, yae = ({
   isExpanded: e,
   toggleExpand: t
 }) => {
@@ -49046,7 +49055,7 @@ const uj = { width: 18, height: 18 }, mae = ({
       children: e ? /* @__PURE__ */ P.jsx(uI, { style: uj }) : /* @__PURE__ */ P.jsx(cI, { style: uj })
     }
   );
-}, vae = L.memo(mae), gae = ({
+}, bae = L.memo(yae), xae = ({
   headerProps: e,
   headSideNav: t,
   headerBreadcrumbs: o,
@@ -49075,16 +49084,16 @@ const uj = { width: 18, height: 18 }, mae = ({
     ...e,
     children: [
       /* @__PURE__ */ P.jsxs(Nc, { sx: { display: "flex", alignItems: "center" }, children: [
-        /* @__PURE__ */ P.jsx(vae, { ...t }),
-        /* @__PURE__ */ P.jsx(lae, { ...o })
+        /* @__PURE__ */ P.jsx(bae, { ...t }),
+        /* @__PURE__ */ P.jsx(fae, { ...o })
       ] }),
       /* @__PURE__ */ P.jsxs(Nc, { sx: { display: "flex", alignItems: "center" }, children: [
         s,
-        /* @__PURE__ */ P.jsx(qie, { ...c })
+        /* @__PURE__ */ P.jsx(Kie, { ...c })
       ] })
     ]
   }
-), yae = L.memo(gae), bae = ({
+), Sae = L.memo(xae), Eae = ({
   data: e,
   listProps: t,
   listItemButtonProps: o,
@@ -49100,7 +49109,7 @@ const uj = { width: 18, height: 18 }, mae = ({
       /* @__PURE__ */ P.jsx(Io, { ...c == null ? void 0 : c(f), children: f.text })
     ]
   }
-) }, f.id)) }), xae = L.memo(bae), Sae = Ay.AdminAppHeader.height, Eae = ({
+) }, f.id)) }), Tae = L.memo(Eae), Cae = Ay.AdminAppHeader.height, Rae = ({
   logo: e,
   isExpanded: t,
   navigation: o
@@ -49110,7 +49119,7 @@ const uj = { width: 18, height: 18 }, mae = ({
     {
       onClick: e == null ? void 0 : e.onClick,
       sx: {
-        height: Sae,
+        height: Cae,
         display: "flex",
         alignItems: "center",
         cursor: "pointer",
@@ -49148,7 +49157,7 @@ const uj = { width: 18, height: 18 }, mae = ({
   ),
   /* @__PURE__ */ P.jsx(i_, {}),
   /* @__PURE__ */ P.jsx(
-    xae,
+    Tae,
     {
       data: o == null ? void 0 : o.list,
       listProps: {
@@ -49185,14 +49194,14 @@ const uj = { width: 18, height: 18 }, mae = ({
       })
     }
   )
-] }), fI = rS(Eae), cj = Ay.AdminAppSideNav.smallWidth, Tae = Ay.AdminAppSideNav.largeWidth, Cae = ({
+] }), fI = rS(Rae), cj = Ay.AdminAppSideNav.smallWidth, wae = Ay.AdminAppSideNav.largeWidth, Oae = ({
   sideNavProps: e,
   isExpanded: t,
   logo: o,
   navigation: s
 }) => {
   const c = L.useMemo(
-    () => t ? Tae : cj,
+    () => t ? wae : cj,
     [t]
   );
   return /* @__PURE__ */ P.jsx(
@@ -49233,8 +49242,8 @@ const uj = { width: 18, height: 18 }, mae = ({
       )
     }
   );
-}, Rae = L.memo(Cae), wae = ["addEndListener", "appear", "children", "container", "direction", "easing", "in", "onEnter", "onEntered", "onEntering", "onExit", "onExited", "onExiting", "style", "timeout", "TransitionComponent"];
-function Oae(e, t, o) {
+}, kae = L.memo(Oae), _ae = ["addEndListener", "appear", "children", "container", "direction", "easing", "in", "onEnter", "onEntered", "onEntering", "onExit", "onExited", "onExiting", "style", "timeout", "TransitionComponent"];
+function Mae(e, t, o) {
   const s = t.getBoundingClientRect(), c = o && o.getBoundingClientRect(), f = kc(t);
   let d;
   if (t.fakeTransform)
@@ -49254,7 +49263,7 @@ function dI(e) {
   return typeof e == "function" ? e() : e;
 }
 function Jx(e, t, o) {
-  const s = dI(o), c = Oae(e, t, s);
+  const s = dI(o), c = Mae(e, t, s);
   c && (t.style.webkitTransform = c, t.style.transform = c);
 }
 const pI = /* @__PURE__ */ L.forwardRef(function(t, o) {
@@ -49282,7 +49291,7 @@ const pI = /* @__PURE__ */ L.forwardRef(function(t, o) {
     timeout: I = f,
     // eslint-disable-next-line react/prop-types
     TransitionComponent: A = RS
-  } = t, B = at(t, wae), V = L.useRef(null), te = zo(g.ref, V, o), ne = (X) => (he) => {
+  } = t, B = at(t, _ae), V = L.useRef(null), te = zo(g.ref, V, o), ne = (X) => (he) => {
     X && (he === void 0 ? X(V.current) : X(V.current, he));
   }, J = ne((X, he) => {
     Jx(S, X, b), VO(X), k && k(X, he);
@@ -49445,17 +49454,17 @@ process.env.NODE_ENV !== "production" && (pI.propTypes = {
     exit: i.number
   })])
 });
-const kae = pI;
-function _ae(e) {
+const Nae = pI;
+function Aae(e) {
   return Wt("MuiDrawer", e);
 }
 qt("MuiDrawer", ["root", "docked", "paper", "paperAnchorLeft", "paperAnchorRight", "paperAnchorTop", "paperAnchorBottom", "paperAnchorDockedLeft", "paperAnchorDockedRight", "paperAnchorDockedTop", "paperAnchorDockedBottom", "modal"]);
-const Mae = ["BackdropProps"], Nae = ["anchor", "BackdropProps", "children", "className", "elevation", "hideBackdrop", "ModalProps", "onClose", "open", "PaperProps", "SlideProps", "TransitionComponent", "transitionDuration", "variant"], hI = (e, t) => {
+const Dae = ["BackdropProps"], $ae = ["anchor", "BackdropProps", "children", "className", "elevation", "hideBackdrop", "ModalProps", "onClose", "open", "PaperProps", "SlideProps", "TransitionComponent", "transitionDuration", "variant"], hI = (e, t) => {
   const {
     ownerState: o
   } = e;
   return [t.root, (o.variant === "permanent" || o.variant === "persistent") && t.docked, t.modal];
-}, Aae = (e) => {
+}, jae = (e) => {
   const {
     classes: t,
     anchor: o,
@@ -49466,8 +49475,8 @@ const Mae = ["BackdropProps"], Nae = ["anchor", "BackdropProps", "children", "cl
     modal: ["modal"],
     paper: ["paper", `paperAnchor${ft(o)}`, s !== "temporary" && `paperAnchorDocked${ft(o)}`]
   };
-  return Kt(c, _ae, t);
-}, Dae = He(Yk, {
+  return Kt(c, Aae, t);
+}, Pae = He(Yk, {
   name: "MuiDrawer",
   slot: "Root",
   overridesResolver: hI
@@ -49483,7 +49492,7 @@ const Mae = ["BackdropProps"], Nae = ["anchor", "BackdropProps", "children", "cl
   overridesResolver: hI
 })({
   flex: "0 0 auto"
-}), $ae = He(gs, {
+}), Lae = He(gs, {
   name: "MuiDrawer",
   slot: "Paper",
   overridesResolver: (e, t) => {
@@ -49542,13 +49551,13 @@ const Mae = ["BackdropProps"], Nae = ["anchor", "BackdropProps", "children", "cl
   top: "down",
   bottom: "up"
 };
-function jae(e) {
+function Iae(e) {
   return ["left", "right"].indexOf(e) !== -1;
 }
-function Pae({
+function zae({
   direction: e
 }, t) {
-  return e === "rtl" && jae(t) ? mI[t] : t;
+  return e === "rtl" && Iae(t) ? mI[t] : t;
 }
 const vI = /* @__PURE__ */ L.forwardRef(function(t, o) {
   const s = Ft({
@@ -49572,21 +49581,21 @@ const vI = /* @__PURE__ */ L.forwardRef(function(t, o) {
     PaperProps: _ = {},
     SlideProps: j,
     // eslint-disable-next-line react/prop-types
-    TransitionComponent: U = kae,
+    TransitionComponent: U = Nae,
     transitionDuration: $ = d,
     variant: I = "temporary"
-  } = s, A = at(s.ModalProps, Mae), B = at(s, Nae), V = L.useRef(!1);
+  } = s, A = at(s.ModalProps, Dae), B = at(s, $ae), V = L.useRef(!1);
   L.useEffect(() => {
     V.current = !0;
   }, []);
-  const te = Pae({
+  const te = zae({
     direction: f ? "rtl" : "ltr"
   }, v), J = W({}, s, {
     anchor: v,
     elevation: E,
     open: M,
     variant: I
-  }, B), q = Aae(J), oe = /* @__PURE__ */ P.jsx($ae, W({
+  }, B), q = jae(J), oe = /* @__PURE__ */ P.jsx(Lae, W({
     elevation: I === "temporary" ? E : 0,
     square: !0
   }, _, {
@@ -49616,7 +49625,7 @@ const vI = /* @__PURE__ */ L.forwardRef(function(t, o) {
     ref: o
   }, B, {
     children: G
-  })) : /* @__PURE__ */ P.jsx(Dae, W({
+  })) : /* @__PURE__ */ P.jsx(Pae, W({
     BackdropProps: W({}, g, k, {
       transitionDuration: $
     }),
@@ -49716,21 +49725,21 @@ process.env.NODE_ENV !== "production" && (vI.propTypes = {
    */
   variant: i.oneOf(["permanent", "persistent", "temporary"])
 });
-const Lae = vI, gI = L.createContext({
+const Uae = vI, gI = L.createContext({
   toggleThemeMode: () => {
   },
   setThemeMode: () => {
   }
 });
-var l_ = {}, Iae = $i;
+var l_ = {}, Fae = $i;
 Object.defineProperty(l_, "__esModule", {
   value: !0
 });
-var yI = l_.default = void 0, zae = Iae(ja()), Uae = P;
-yI = l_.default = (0, zae.default)(/* @__PURE__ */ (0, Uae.jsx)("path", {
+var yI = l_.default = void 0, Bae = Fae(ja()), Vae = P;
+yI = l_.default = (0, Bae.default)(/* @__PURE__ */ (0, Vae.jsx)("path", {
   d: "M12 6v1.79c0 .45.54.67.85.35l2.79-2.79c.2-.2.2-.51 0-.71l-2.79-2.79c-.31-.31-.85-.09-.85.36V4c-4.42 0-8 3.58-8 8 0 1.04.2 2.04.57 2.95.27.67 1.13.85 1.64.34.27-.27.38-.68.23-1.04C6.15 13.56 6 12.79 6 12c0-3.31 2.69-6 6-6m5.79 2.71c-.27.27-.38.69-.23 1.04.28.7.44 1.46.44 2.25 0 3.31-2.69 6-6 6v-1.79c0-.45-.54-.67-.85-.35l-2.79 2.79c-.2.2-.2.51 0 .71l2.79 2.79c.31.31.85.09.85-.35V20c4.42 0 8-3.58 8-8 0-1.04-.2-2.04-.57-2.95-.27-.67-1.13-.85-1.64-.34"
 }), "AutorenewRounded");
-const Fae = ({
+const Hae = ({
   show: e = !1,
   onClick: t
 }) => /* @__PURE__ */ P.jsx(
@@ -49743,26 +49752,26 @@ const Fae = ({
     onClick: t,
     children: /* @__PURE__ */ P.jsx(yI, {})
   }
-), Bae = L.memo(
-  Fae
+), Wae = L.memo(
+  Hae
 );
-var u_ = {}, Vae = $i;
+var u_ = {}, qae = $i;
 Object.defineProperty(u_, "__esModule", {
   value: !0
 });
-var bI = u_.default = void 0, Hae = Vae(ja()), Wae = P;
-bI = u_.default = (0, Hae.default)(/* @__PURE__ */ (0, Wae.jsx)("path", {
+var bI = u_.default = void 0, Yae = qae(ja()), Gae = P;
+bI = u_.default = (0, Yae.default)(/* @__PURE__ */ (0, Gae.jsx)("path", {
   d: "M9.37 5.51c-.18.64-.27 1.31-.27 1.99 0 4.08 3.32 7.4 7.4 7.4.68 0 1.35-.09 1.99-.27C17.45 17.19 14.93 19 12 19c-3.86 0-7-3.14-7-7 0-2.93 1.81-5.45 4.37-6.49M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9c0-.46-.04-.92-.1-1.36-.98 1.37-2.58 2.26-4.4 2.26-2.98 0-5.4-2.42-5.4-5.4 0-1.81.89-3.42 2.26-4.4-.44-.06-.9-.1-1.36-.1"
 }), "DarkModeOutlined");
-var c_ = {}, qae = $i;
+var c_ = {}, Kae = $i;
 Object.defineProperty(c_, "__esModule", {
   value: !0
 });
-var xI = c_.default = void 0, Yae = qae(ja()), Gae = P;
-xI = c_.default = (0, Yae.default)(/* @__PURE__ */ (0, Gae.jsx)("path", {
+var xI = c_.default = void 0, Xae = Kae(ja()), Qae = P;
+xI = c_.default = (0, Xae.default)(/* @__PURE__ */ (0, Qae.jsx)("path", {
   d: "M12 9c1.65 0 3 1.35 3 3s-1.35 3-3 3-3-1.35-3-3 1.35-3 3-3m0-2c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5M2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1m18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1M11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1m0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1M5.99 4.58c-.39-.39-1.03-.39-1.41 0-.39.39-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41zm12.37 12.37c-.39-.39-1.03-.39-1.41 0-.39.39-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0 .39-.39.39-1.03 0-1.41zm1.06-10.96c.39-.39.39-1.03 0-1.41-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0zM7.05 18.36c.39-.39.39-1.03 0-1.41-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0z"
 }), "LightModeOutlined");
-const Kae = () => {
+const Zae = () => {
   const e = L.useContext(gI), t = Hr(), o = t.palette.mode === "dark", s = L.useMemo(
     () => [
       { buttonType: "light", icon: /* @__PURE__ */ P.jsx(xI, {}) },
@@ -49786,24 +49795,24 @@ const Kae = () => {
       c
     );
   }) });
-}, Xae = L.memo(Kae);
-var f_ = {}, Qae = $i;
+}, Jae = L.memo(Zae);
+var f_ = {}, ese = $i;
 Object.defineProperty(f_, "__esModule", {
   value: !0
 });
-var SI = f_.default = void 0, Zae = Qae(ja()), Jae = P;
-SI = f_.default = (0, Zae.default)(/* @__PURE__ */ (0, Jae.jsx)("path", {
+var SI = f_.default = void 0, tse = ese(ja()), nse = P;
+SI = f_.default = (0, tse.default)(/* @__PURE__ */ (0, nse.jsx)("path", {
   d: "M6 16h2v2c0 .55.45 1 1 1s1-.45 1-1v-3c0-.55-.45-1-1-1H6c-.55 0-1 .45-1 1s.45 1 1 1m2-8H6c-.55 0-1 .45-1 1s.45 1 1 1h3c.55 0 1-.45 1-1V6c0-.55-.45-1-1-1s-1 .45-1 1zm7 11c.55 0 1-.45 1-1v-2h2c.55 0 1-.45 1-1s-.45-1-1-1h-3c-.55 0-1 .45-1 1v3c0 .55.45 1 1 1m1-11V6c0-.55-.45-1-1-1s-1 .45-1 1v3c0 .55.45 1 1 1h3c.55 0 1-.45 1-1s-.45-1-1-1z"
 }), "FullscreenExitRounded");
-var d_ = {}, ese = $i;
+var d_ = {}, rse = $i;
 Object.defineProperty(d_, "__esModule", {
   value: !0
 });
-var EI = d_.default = void 0, tse = ese(ja()), nse = P;
-EI = d_.default = (0, tse.default)(/* @__PURE__ */ (0, nse.jsx)("path", {
+var EI = d_.default = void 0, ose = rse(ja()), ise = P;
+EI = d_.default = (0, ose.default)(/* @__PURE__ */ (0, ise.jsx)("path", {
   d: "M6 14c-.55 0-1 .45-1 1v3c0 .55.45 1 1 1h3c.55 0 1-.45 1-1s-.45-1-1-1H7v-2c0-.55-.45-1-1-1m0-4c.55 0 1-.45 1-1V7h2c.55 0 1-.45 1-1s-.45-1-1-1H6c-.55 0-1 .45-1 1v3c0 .55.45 1 1 1m11 7h-2c-.55 0-1 .45-1 1s.45 1 1 1h3c.55 0 1-.45 1-1v-3c0-.55-.45-1-1-1s-1 .45-1 1zM14 6c0 .55.45 1 1 1h2v2c0 .55.45 1 1 1s1-.45 1-1V6c0-.55-.45-1-1-1h-3c-.55 0-1 .45-1 1"
 }), "FullscreenRounded");
-const rse = ({
+const ase = ({
   show: e = !0,
   onClick: t
 }) => {
@@ -49831,16 +49840,16 @@ const rse = ({
       children: o ? /* @__PURE__ */ P.jsx(SI, {}) : /* @__PURE__ */ P.jsx(EI, {})
     }
   );
-}, ose = L.memo(rse);
-var p_ = {}, ise = $i;
+}, sse = L.memo(ase);
+var p_ = {}, lse = $i;
 Object.defineProperty(p_, "__esModule", {
   value: !0
 });
-var TI = p_.default = void 0, ase = ise(ja()), sse = P;
-TI = p_.default = (0, ase.default)(/* @__PURE__ */ (0, sse.jsx)("path", {
+var TI = p_.default = void 0, use = lse(ja()), cse = P;
+TI = p_.default = (0, use.default)(/* @__PURE__ */ (0, cse.jsx)("path", {
   d: "M20 5h-9.12L10 2H4c-1.1 0-2 .9-2 2v13c0 1.1.9 2 2 2h7l1 3h8c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2M7.17 14.59c-2.25 0-4.09-1.83-4.09-4.09s1.83-4.09 4.09-4.09c1.04 0 1.99.37 2.74 1.07l.07.06-1.23 1.18-.06-.05c-.29-.27-.78-.59-1.52-.59-1.31 0-2.38 1.09-2.38 2.42s1.07 2.42 2.38 2.42c1.37 0 1.96-.87 2.12-1.46H7.08V9.91h3.95l.01.07c.04.21.05.4.05.61 0 2.35-1.61 4-3.92 4m6.03-1.71c.33.6.74 1.18 1.19 1.7l-.54.53zm.77-.76h-.99l-.31-1.04h3.99s-.34 1.31-1.56 2.74c-.52-.62-.89-1.23-1.13-1.7M21 20c0 .55-.45 1-1 1h-7l2-2-.81-2.77.92-.92L17.79 18l.73-.73-2.71-2.68c.9-1.03 1.6-2.25 1.92-3.51H19v-1.04h-3.64V9h-1.04v1.04h-1.96L11.18 6H20c.55 0 1 .45 1 1z"
 }), "GTranslateRounded");
-const lse = ({
+const fse = ({
   show: e = !0,
   languagesList: t,
   defaultValue: o,
@@ -49908,7 +49917,7 @@ const lse = ({
       }
     )
   ] });
-}, use = L.memo(lse), cse = ({
+}, dse = L.memo(fse), pse = ({
   appLayoutProps: e,
   appSideNavProps: t,
   appHeaderProps: o,
@@ -49957,9 +49966,9 @@ const lse = ({
           },
           ...e,
           children: [
-            /* @__PURE__ */ P.jsx(Rae, { ...t, isExpanded: v }),
+            /* @__PURE__ */ P.jsx(kae, { ...t, isExpanded: v }),
             /* @__PURE__ */ P.jsx(
-              Lae,
+              Uae,
               {
                 anchor: "left",
                 open: v,
@@ -49984,13 +49993,13 @@ const lse = ({
               }
             ),
             /* @__PURE__ */ P.jsxs(
-              Oie,
+              Mie,
               {
                 contentProps: {
                   sx: { flex: 1 }
                 },
                 headerComponent: /* @__PURE__ */ P.jsx(
-                  yae,
+                  Sae,
                   {
                     ...o,
                     headSideNav: {
@@ -50000,20 +50009,20 @@ const lse = ({
                     },
                     children: /* @__PURE__ */ P.jsxs(P.Fragment, { children: [
                       /* @__PURE__ */ P.jsx(
-                        Bae,
+                        Wae,
                         {
                           ...(M = o == null ? void 0 : o.headerActions) == null ? void 0 : M.refetchPageContentData
                         }
                       ),
                       /* @__PURE__ */ P.jsx(
-                        use,
+                        dse,
                         {
                           ...(_ = o == null ? void 0 : o.headerActions) == null ? void 0 : _.toggleTranslation
                         }
                       ),
-                      /* @__PURE__ */ P.jsx(Xae, {}),
+                      /* @__PURE__ */ P.jsx(Jae, {}),
                       /* @__PURE__ */ P.jsx(
-                        ose,
+                        sse,
                         {
                           ...(j = o == null ? void 0 : o.headerActions) == null ? void 0 : j.toggleFullScreen
                         }
@@ -50023,7 +50032,7 @@ const lse = ({
                 ),
                 children: [
                   c,
-                  /* @__PURE__ */ P.jsx(jie, { ...s })
+                  /* @__PURE__ */ P.jsx(Iie, { ...s })
                 ]
               }
             )
@@ -50032,30 +50041,33 @@ const lse = ({
       ) })
     }
   );
-}, Ose = L.memo(cse);
+}, Mse = L.memo(pse);
 export {
-  Oie as AdminAppContent,
-  jie as AdminAppFooter,
-  yae as AdminAppHeader,
-  Rae as AdminAppSideNav,
+  Mie as AdminAppContent,
+  Iie as AdminAppFooter,
+  Sae as AdminAppHeader,
+  kae as AdminAppSideNav,
   Ay as AdminAppStyle,
-  Ose as AdminLayout,
-  mse as BaseAccordion,
-  Rse as BaseAlert,
-  bse as BaseBarChart,
+  Mse as AdminLayout,
+  yse as BaseAccordion,
+  kse as BaseAlert,
+  Ese as BaseBarChart,
   O1 as BaseButton,
   Dre as BaseControlledDialog,
-  Sse as BaseGrid,
+  Cse as BaseGrid,
   OS as BaseIconButton,
-  gse as BaseLineChart,
-  Tse as BaseList,
-  Cse as BaseListItem,
-  xse as BasePaper,
-  wse as BaseParagraph,
-  yse as BasePieChart,
-  Ese as BaseUncontrolledDialog,
-  vse as CapsuleButton,
+  xse as BaseLineChart,
+  wse as BaseList,
+  Ose as BaseListItem,
+  Tse as BasePaper,
+  _se as BaseParagraph,
+  Sse as BasePieChart,
+  Rse as BaseUncontrolledDialog,
+  bse as CapsuleButton,
   Tie as SOCIAL_LINKS,
   BW as SelectedCapsuleButton,
+  Rie as enterFullScreen,
+  wie as exitFullScreen,
+  Oie as isFullScreen,
   Cie as toggleFullScreen
 };
