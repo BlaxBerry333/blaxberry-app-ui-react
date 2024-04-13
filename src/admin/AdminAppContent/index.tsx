@@ -22,9 +22,9 @@ const AdminAppContent: React.FC<AdminAppContentProps> = ({
 
       <Box
         sx={{
-          pt: 2,
+          py: 2,
           overflowY: "scroll",
-          height: `calc(100vh - ${AdminAppHeaderHeight}px - 32px)`,
+          height: `calc(100vh - ${AdminAppHeaderHeight}px - 48px)`, // 8px * 6
         }}
       >
         {children}

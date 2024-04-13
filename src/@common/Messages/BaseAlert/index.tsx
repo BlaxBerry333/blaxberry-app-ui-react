@@ -3,9 +3,9 @@ import Snackbar, { type SnackbarProps } from "@mui/material/Snackbar";
 import { memo, type FC, type PropsWithChildren } from "react";
 
 export type BaseAlertProps = PropsWithChildren<{
-  snackbarProps: SnackbarProps;
-  alertProps: AlertProps;
-  handleClose: (event?: React.SyntheticEvent | Event, reason?: string) => void;
+  snackbarProps?: SnackbarProps;
+  alertProps?: AlertProps;
+  handleClose?: (event?: React.SyntheticEvent | Event, reason?: string) => void;
 }>;
 
 const BaseAlert: FC<BaseAlertProps> = ({
@@ -18,9 +18,9 @@ const BaseAlert: FC<BaseAlertProps> = ({
     <Snackbar autoHideDuration={6000} {...snackbarProps}>
       <Alert
         onClose={handleClose}
-        severity={alertProps.severity}
-        variant={alertProps.variant}
-        sx={{ width: "100%", ...alertProps.sx }}
+        severity={alertProps?.severity}
+        variant={alertProps?.variant}
+        sx={{ width: "100%", ...alertProps?.sx }}
         {...alertProps}
       >
         {children}

@@ -20,7 +20,7 @@ const BasePaper: React.FC<BasePaperProps> = ({
           p: 2,
           backgroundColor: "background.paper",
           color: "text.secondary",
-          transition: theme.transitions.create("all", {
+          transition: theme.transitions.create(["color", "background-color"], {
             easing: theme.transitions.easing.sharp,
             duration: theme.transitions.duration.leavingScreen,
           }),

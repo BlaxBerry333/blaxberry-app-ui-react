@@ -42,19 +42,23 @@ const AdminAppSideNav: React.FC<AdminAppSideNavProps> = ({
 
   return (
     <Paper
+      className="BlaxBerry-UI-AdminLayout-aside"
       component="aside"
       elevation={2}
       sx={(theme) => ({
         overflowX: "hidden",
         height: `calc(100vh - 32px)`,
         width: navWidth,
-        minWidth: navWidth,
+        minWidth: smallWidth,
         backgroundColor: "background.paper",
         color: "text.secondary",
-        transition: theme.transitions.create("all", {
-          easing: theme.transitions.easing.sharp,
-          duration: theme.transitions.duration.leavingScreen,
-        }),
+        transition: theme.transitions.create(
+          ["width", "minWidth", "color", "background-color"],
+          {
+            easing: theme.transitions.easing.sharp,
+            duration: theme.transitions.duration.leavingScreen,
+          },
+        ),
         borderRadius: theme.shape.borderRadius,
       })}
       {...sideNavProps}
@@ -79,13 +83,16 @@ const AdminAppSideNav: React.FC<AdminAppSideNavProps> = ({
         )}
         <Typography
           noWrap
+          fontWeight={600}
           sx={(theme) => ({
             opacity: isExpanded ? 1 : 0,
-            transition: theme.transitions.create("all", {
-              easing: theme.transitions.easing.sharp,
-              duration: theme.transitions.duration.leavingScreen,
-            }),
-            fontWeight: 600,
+            transition: theme.transitions.create(
+              ["color", "background-color"],
+              {
+                easing: theme.transitions.easing.sharp,
+                duration: theme.transitions.duration.leavingScreen,
+              },
+            ),
           })}
         >
           {logo?.text}
@@ -119,11 +126,13 @@ const AdminAppSideNav: React.FC<AdminAppSideNavProps> = ({
           noWrap: true,
           sx: (theme) => ({
             opacity: isExpanded ? 1 : 0,
-
-            transition: theme.transitions.create("all", {
-              easing: theme.transitions.easing.sharp,
-              duration: theme.transitions.duration.leavingScreen,
-            }),
+            transition: theme.transitions.create(
+              ["color", "background-color"],
+              {
+                easing: theme.transitions.easing.sharp,
+                duration: theme.transitions.duration.leavingScreen,
+              },
+            ),
             color: listItem?.isActive ? theme.palette.primary.main : "GrayText",
           }),
         })}

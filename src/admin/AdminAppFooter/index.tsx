@@ -24,7 +24,7 @@ const AdminAppFooter: React.FC<AdminAppFooterProps> = ({
   showTopDivider = true,
 }) => {
   return (
-    <>
+    <div className="BlaxBerry-UI-AdminLayout-footer">
       <Divider
         sx={{
           display: showTopDivider ? "block" : "none",
@@ -46,7 +46,7 @@ const AdminAppFooter: React.FC<AdminAppFooterProps> = ({
           mt: showTopDivider ? 0 : 2,
           backgroundColor: "background.paper",
           color: "text.secondary",
-          transition: theme.transitions.create("all", {
+          transition: theme.transitions.create(["color", "background-color"], {
             easing: theme.transitions.easing.sharp,
             duration: theme.transitions.duration.leavingScreen,
           }),
@@ -79,7 +79,7 @@ const AdminAppFooter: React.FC<AdminAppFooterProps> = ({
           </Stack>
         )}
       </Paper>
-    </>
+    </div>
   );
 };
 

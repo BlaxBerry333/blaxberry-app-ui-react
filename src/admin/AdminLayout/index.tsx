@@ -1,4 +1,4 @@
-import Box from "@mui/material/Box";
+import Box, { type BoxProps } from "@mui/material/Box";
 import {
   ThemeProvider as MuiThemeProvider,
   createTheme,
@@ -22,6 +22,7 @@ import {
 } from "./widgets";
 
 export type AdminLayoutProps = React.PropsWithChildren<{
+  appLayoutProps?: BoxProps;
   appSideNavProps: Omit<AdminAppSideNavProps, "isExpanded">;
   appHeaderProps: AdminAppHeaderProps;
   appFooterProps: AdminAppFooterProps;
@@ -32,6 +33,7 @@ export type AdminLayoutProps = React.PropsWithChildren<{
 }>;
 
 const AdminLayout: React.FC<AdminLayoutProps> = ({
+  appLayoutProps,
   appSideNavProps,
   appHeaderProps,
   appFooterProps,
@@ -78,17 +80,23 @@ const AdminLayout: React.FC<AdminLayoutProps> = ({
     >
       <MuiThemeProvider theme={theme}>
         <Box
+          className="BlaxBerry-UI-AdminLayout-root"
           sx={{
             display: "flex",
             pt: 2,
             px: 2,
             backgroundColor: "background.paper",
             color: "text.secondary",
-            transition: theme.transitions.create("all", {
-              easing: theme.transitions.easing.sharp,
-              duration: theme.transitions.duration.leavingScreen,
-            }),
+            transition: theme.transitions.create(
+              ["color", "background-color"],
+              {
+                easing: theme.transitions.easing.sharp,
+                duration: theme.transitions.duration.leavingScreen,
+              },
+            ),
+            ...appLayoutProps?.sx,
           }}
+          {...appLayoutProps}
         >
           <AdminAppSideNav {...appSideNavProps} isExpanded={isExpanded} />
 

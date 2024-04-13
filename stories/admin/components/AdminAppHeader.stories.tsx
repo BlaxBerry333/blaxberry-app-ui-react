@@ -54,7 +54,7 @@ const meta = {
       },
       listProps: {
         listSubheader: {
-          children: "blaxberry@123.example.com",
+          children: "abc@123.example.com",
         },
         data: [
           {

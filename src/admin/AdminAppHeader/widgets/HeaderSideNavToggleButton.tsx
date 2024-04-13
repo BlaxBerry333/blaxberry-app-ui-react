@@ -16,7 +16,7 @@ const HeaderSideNavToggleButton: React.FC<HeaderSideNavToggleButtonProps> = ({
   toggleExpand,
 }) => {
   return (
-    <BaseIconButton disableElevation onClick={toggleExpand} sx={{ mr: 2 }}>
+    <BaseIconButton disableElevation onClick={toggleExpand}>
       {isExpanded ? (
         <FormatIndentDecreaseIcon style={iconStyles} />
       ) : (

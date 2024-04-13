@@ -43,6 +43,7 @@ const HeaderBreadcrumbs: React.FC<HeaderBreadcrumbsProps> = ({
               display: "flex",
               alignItems: "flex-end",
               fontWeight: isActive ? 500 : 400,
+              ml: 2,
             }}
           >
             {/* icon */}

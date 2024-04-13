@@ -39,17 +39,19 @@ const AdminAppHeader: React.FC<AdminAppHeaderProps> = ({
 }) => {
   return (
     <Paper
+      className="BlaxBerry-UI-AdminLayout-header"
       component="header"
       elevation={2}
       sx={(theme) => ({
         height: AdminAppStyle.AdminAppHeader.height,
+        minWidth: "275px",
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
         borderRadius: theme.shape.borderRadius,
         px: 2,
         backgroundColor: "background.paper",
-        transition: theme.transitions.create("all", {
+        transition: theme.transitions.create(["color", "background-color"], {
           easing: theme.transitions.easing.sharp,
           duration: theme.transitions.duration.leavingScreen,
         }),
