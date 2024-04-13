@@ -33,7 +33,7 @@ yarn add git+https://github.com/BlaxBerry333/blaxberry-app-ui-react
 │   │   ├── [...].mdx
 │   │   └── [...].stories.tsx
 │   └── ...
-├── storybook-static                storybook static pages
+├── storybook-static                # storybook static pages
 │   ├── ...
 │   └── index.html
 ├── package.json
@@ -67,6 +67,11 @@ yarn build:lib
 # 3. commit then push
 git commit -m "commit message"
 git push
+
+# 4. move to project used this ui lib
+# then install this ui lib again
+cd <workplace>/<project>
+yarn add git+https://github.com/BlaxBerry333/blaxberry-app-ui-react
 ```
 
 ## Documents
