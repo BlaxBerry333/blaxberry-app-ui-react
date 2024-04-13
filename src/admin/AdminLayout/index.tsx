@@ -1,4 +1,5 @@
 import Box, { type BoxProps } from "@mui/material/Box";
+import Drawer from "@mui/material/Drawer";
 import {
   ThemeProvider as MuiThemeProvider,
   createTheme,
@@ -10,6 +11,7 @@ import AdminAppContent from "../AdminAppContent";
 import AdminAppFooter, { type AdminAppFooterProps } from "../AdminAppFooter";
 import AdminAppHeader, { type AdminAppHeaderProps } from "../AdminAppHeader";
 import AdminAppSideNav, { type AdminAppSideNavProps } from "../AdminAppSideNav";
+import { AdminAppSideNavContent } from "../AdminAppSideNav/widgets";
 import {
   ThemePaletteContext,
   type ThemeMode,
@@ -43,6 +45,9 @@ const AdminLayout: React.FC<AdminLayoutProps> = ({
   const [isExpanded, setIsExpanded] = React.useState<boolean>(false);
   const toggleExpand = React.useCallback(() => {
     React.startTransition(() => setIsExpanded((s) => !s));
+  }, []);
+  const hiddenSideNav = React.useCallback(() => {
+    React.startTransition(() => setIsExpanded(false));
   }, []);
 
   const [themeMode, setThemeMode] = React.useState<ThemeMode>(customThemeMode);
@@ -100,9 +105,30 @@ const AdminLayout: React.FC<AdminLayoutProps> = ({
         >
           <AdminAppSideNav {...appSideNavProps} isExpanded={isExpanded} />
 
+          <Drawer
+            anchor="left"
+            open={isExpanded}
+            onClose={hiddenSideNav}
+            sx={{
+              display: {
+                xs: "block",
+                md: "none",
+              },
+            }}
+            variant="temporary"
+            ModalProps={{ keepMounted: false }}
+            PaperProps={{ sx: { py: 2, width: "60%" } }}
+          >
+            <AdminAppSideNavContent
+              isExpanded={isExpanded}
+              logo={appSideNavProps?.logo}
+              navigation={appSideNavProps?.navigation}
+            />
+          </Drawer>
+
           <AdminAppContent
             contentProps={{
-              sx: { flex: 1, pl: 2 },
+              sx: { flex: 1 },
             }}
             headerComponent={
               <AdminAppHeader
