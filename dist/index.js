@@ -47802,7 +47802,7 @@ const Ay = {
   contentProps: e,
   headerComponent: t,
   children: o
-}) => /* @__PURE__ */ P.jsxs(Nc, { ...e, children: [
+}) => /* @__PURE__ */ P.jsxs(Nc, { component: "main", ...e, children: [
   t,
   /* @__PURE__ */ P.jsx(
     Nc,
@@ -49996,7 +49996,7 @@ const fse = ({
               Mie,
               {
                 contentProps: {
-                  sx: { flex: 1 }
+                  sx: { flex: 1, overflow: "scroll" }
                 },
                 headerComponent: /* @__PURE__ */ P.jsx(
                   Sae,
