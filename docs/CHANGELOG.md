@@ -43,15 +43,15 @@
 | BaseLineChart | ✅  |
 | BaseBarChart  | ✅  |
 
-| Tables               |     |
-| -------------------- | :-: |
-| BaseTable.Container  | 🕑  |
-| BaseTable.Row        | 🕑  |
-| BaseTable.Cell       | 🕑  |
-| BaseTable.Head       | 🕑  |
-| BaseTable.Body       | 🕑  |
-| BaseTable.Footer     | 🕑  |
-| BaseTable.Pagination | 🕑  |
+| Tables              |     |
+| ------------------- | :-: |
+| BaseTableContainer  | 🕑  |
+| BaseTableRow        | 🕑  |
+| BaseTableCell       | 🕑  |
+| BaseTableHead       | 🕑  |
+| BaseTableBody       | 🕑  |
+| BaseTableFooter     | 🕑  |
+| BaseTablePagination | 🕑  |
 
 ---
 

@@ -1,4 +1,3 @@
-/* eslint-disable react-refresh/only-export-components */
 import type { FC } from "react";
 
 import type { TableProps } from "@mui/material/Table";
@@ -19,14 +18,7 @@ export type BaseTableContainerProps = {
   tableWrapperProps?: TableContainerProps;
   tableContentProps?: TableProps;
 };
-export type BaseTableRowProps = TableRowProps & { isInsideHead: boolean };
-export type BaseTableCellProps = TableCellProps;
-export type BaseTableHeadProps = TableHeadProps;
-export type BaseTableBodyProps = TableBodyProps;
-export type BaseTableFooterProps = TableFooterProps;
-export type BaseTablePaginationProps = TablePaginationProps;
-
-const BaseTableContainer: FC<BaseTableContainerProps> = ({
+export const BaseTableContainer: FC<BaseTableContainerProps> = ({
   tableWrapperProps,
   tableContentProps,
 }) => {
@@ -36,51 +28,36 @@ const BaseTableContainer: FC<BaseTableContainerProps> = ({
     </TableContainer>
   );
 };
-const BaseTableRow: FC<BaseTableRowProps> = ({ isInsideHead, ...props }) => {
-  return <TableRow component={isInsideHead ? "th" : "td"} {...props} />;
+
+export type BaseTableRowProps = TableRowProps;
+export const BaseTableRow: FC<BaseTableRowProps> = (props) => {
+  return <TableRow {...props} />;
 };
-const BaseTableCell: FC<BaseTableCellProps> = (props) => {
-  return <TableCell {...props} />;
+
+export type BaseTableCellProps = TableCellProps & { isInsideHead: boolean };
+export const BaseTableCell: FC<BaseTableCellProps> = ({
+  isInsideHead,
+  ...props
+}) => {
+  return <TableCell component={isInsideHead ? "th" : "td"} {...props} />;
 };
-const BaseTableHead: FC<BaseTableHeadProps> = (props) => {
+
+export type BaseTableHeadProps = TableHeadProps;
+export const BaseTableHead: FC<BaseTableHeadProps> = (props) => {
   return <TableHead {...props} />;
 };
-const BaseTableBody: FC<BaseTableBodyProps> = (props) => {
+
+export type BaseTableBodyProps = TableBodyProps;
+export const BaseTableBody: FC<BaseTableBodyProps> = (props) => {
   return <TableBody {...props} />;
 };
-const BaseTableFooter: FC<BaseTableFooterProps> = (props) => {
+
+export type BaseTableFooterProps = TableFooterProps;
+export const BaseTableFooter: FC<BaseTableFooterProps> = (props) => {
   return <TableFooter {...props} />;
 };
-const BaseTablePagination: FC<BaseTablePaginationProps> = (props) => {
+
+export type BaseTablePaginationProps = TablePaginationProps;
+export const BaseTablePagination: FC<BaseTablePaginationProps> = (props) => {
   return <TablePagination {...props} />;
 };
-
-type BaseTableFieldNames =
-  | "Container"
-  | "Row"
-  | "Cell"
-  | "Head"
-  | "Body"
-  | "Footer"
-  | "Pagination";
-type BaseTableFieldComponents =
-  | FC<BaseTableContainerProps>
-  | FC<BaseTableRowProps>
-  | FC<BaseTableCellProps>
-  | FC<BaseTableHeadProps>
-  | FC<TableBodyProps>
-  | FC<TableFooterProps>
-  | FC<TablePaginationProps>;
-
-export const BaseTable: Record<BaseTableFieldNames, BaseTableFieldComponents> =
-  {
-    Container: BaseTableContainer,
-    Row: BaseTableRow,
-    Cell: BaseTableCell,
-    Head: BaseTableHead,
-    Body: BaseTableBody,
-    Footer: BaseTableFooter,
-    Pagination: BaseTablePagination,
-  };
-
-/* eslint-enable react-refresh/only-export-components */
