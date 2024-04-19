@@ -11,15 +11,18 @@ export type BaseTableContainerProps = {
     tableWrapperProps?: TableContainerProps;
     tableContentProps?: TableProps;
 };
-export type BaseTableRowProps = TableRowProps & {
+export declare const BaseTableContainer: FC<BaseTableContainerProps>;
+export type BaseTableRowProps = TableRowProps;
+export declare const BaseTableRow: FC<BaseTableRowProps>;
+export type BaseTableCellProps = TableCellProps & {
     isInsideHead: boolean;
 };
-export type BaseTableCellProps = TableCellProps;
+export declare const BaseTableCell: FC<BaseTableCellProps>;
 export type BaseTableHeadProps = TableHeadProps;
+export declare const BaseTableHead: FC<BaseTableHeadProps>;
 export type BaseTableBodyProps = TableBodyProps;
+export declare const BaseTableBody: FC<BaseTableBodyProps>;
 export type BaseTableFooterProps = TableFooterProps;
+export declare const BaseTableFooter: FC<BaseTableFooterProps>;
 export type BaseTablePaginationProps = TablePaginationProps;
-type BaseTableFieldNames = "Container" | "Row" | "Cell" | "Head" | "Body" | "Footer" | "Pagination";
-type BaseTableFieldComponents = FC<BaseTableContainerProps> | FC<BaseTableRowProps> | FC<BaseTableCellProps> | FC<BaseTableHeadProps> | FC<TableBodyProps> | FC<TableFooterProps> | FC<TablePaginationProps>;
-export declare const BaseTable: Record<BaseTableFieldNames, BaseTableFieldComponents>;
-export {};
+export declare const BaseTablePagination: FC<BaseTablePaginationProps>;
