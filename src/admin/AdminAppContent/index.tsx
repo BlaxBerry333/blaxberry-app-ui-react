@@ -17,7 +17,7 @@ const AdminAppContent: React.FC<AdminAppContentProps> = ({
   children,
 }) => {
   return (
-    <Box {...contentProps}>
+    <Box component="main" {...contentProps}>
       {headerComponent}
 
       <Box

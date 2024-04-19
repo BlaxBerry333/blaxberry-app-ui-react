@@ -128,7 +128,7 @@ const AdminLayout: React.FC<AdminLayoutProps> = ({
 
           <AdminAppContent
             contentProps={{
-              sx: { flex: 1 },
+              sx: { flex: 1, overflow: "scroll" },
             }}
             headerComponent={
               <AdminAppHeader
