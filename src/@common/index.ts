@@ -6,3 +6,4 @@ export * from "./Dialogs";
 export * from "./Lists";
 export * from "./Messages";
 export * from "./Paragraphs";
+export * from "./Tables";
